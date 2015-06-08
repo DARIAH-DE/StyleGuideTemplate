@@ -2,7 +2,7 @@
 <html lang="de">
 	<head>
 		<meta charset="utf-8">
-		<title>DARIAH-DE - List Schemas</title>
+		<title>DARIAH-DE :: MyAwesomeTool</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="author" content="Tobias Gradl, University of Bamberg">
 		<meta name="description" content="DARIAH-DE Generic Search">
@@ -21,9 +21,9 @@
 
 		<!-- JavaScript files at the end for faster loading of documents -->
 
-		<script type="text/javascript" src="/schereg/resources/js/jquery-1.8.2.js"></script>
+		<script type="text/javascript" src="/resources/js/jquery-1.8.2.js"></script>
 
-		<script type="text/javascript" src="/schereg/resources/js/bootstrap.js"></script>
+		<script type="text/javascript" src="/resources/js/bootstrap.js"></script>
 
 
 		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -44,7 +44,11 @@
 	  							<span class="icon-bar"></span>
 	  							<span class="icon-bar"></span>
 	  						</a>
-	  						<!-- <a class="brand" href="/schereg/"><img src="/schereg/resources/img/dariah_white.png" height="35" width="121" alt="DARIAH-DE" /></a> -->
+	  						<!--
+	  						<a class="brand" href="/schereg/">
+	  							<img src="/resources/img/dariah_white.png" height="35" width="121" alt="DARIAH-DE" />
+	  						</a>
+	  						-->
 	  						<div class="nav-collapse collapse">
 	  							<ul class="nav pull-right">									
 	  								<li class="dropdown">
@@ -56,24 +60,35 @@
 	  										<li><a href="?lang=en"><img src="/schereg/resources/img/flag_en.png" height="32" width="32" alt="English" /> Englisch</a></li>
 
 	  										<li><a href="?lang=de"><img src="/schereg/resources/img/flag_de.png" height="32" width="32" alt="English" /> Deutsch</a></li>
-
 	  									</ul>
 	  								</li>
 	  								<li>
 										<li>
-											<a href="/schereg/saml/logout" ><i class="icon-signout"></i> Logout</a>
+											<a href="/schereg/saml/logout" ><i class="icon-signout icon-white"></i> Logout</a>
 										</li>
 									</li>	
 								</ul>
 								<ul class="nav">
-									<li><a href="/schereg/" class="brand">DARIAH-DE</a></li>
+									<li class="dropdown">
+										<a class="brand dropdown-toggle" data-toggle="dropdown" href="#">
+											<span class="caret"></span>
+										<!--<img src="/resources/img/dariah_white.png" height="35" width="121" alt="DARIAH-DE" />-->
+											DARIAH-DE 
+										</a>
+										<ul class="dropdown-menu">
+
+											<li><a href="?lang=en">DARIAH-DE</a></li>
+											<li><a href="?lang=en">Schema Registry</a></li>
+											<li><a href="?lang=en">Collection Registry</a></li>
+											<li><a href="?lang=de">...</a></li>
+										</ul>
+									</li>
+									<!--
 									<li  class="dropdown">
 										<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-white icon-star"></i> myFederation <b class="caret"></b></a>
 										<ul class="dropdown-menu">
 											<li class="nav-header">Personal Settings</li>
 											<li><a href="/schereg/user/profile"> My Profile</a></li>
-											
-											<!---->
 											<li><a href="/schereg/auth/saml/admin"> SAML Metadata Management</a></li>
 											
 											
@@ -88,8 +103,9 @@
 											<li><a href="http://search.de.dariah.eu/search/search/extended"> Erweiterte Suche </a></li>
 										</ul>
 									</li>
-									<li  class="active"><a href="/schereg/schema">Schema Registry</a></li>
-									<li ><a href="/schereg/mapping">Crosswalk Registry</a></li>
+									-->
+									<li  class="active"><a href="/schereg/schema">MyAwesomeTool</a></li>
+									<li ><a href="#">AnAwesomeRelatedTool</a></li>
 								</ul>
 							</div>
 						</div>
@@ -97,217 +113,49 @@
 				</div>
 			</div>
 		</div>
-
 		<div id="content_layout" class="container-fluid">
 			<div style="height: 70px;"></div>
 			<div class="row-fluid">
 				<div class="span10 offset1 main-content-wrapper no-margin">
 					<div id="content" class="primary-area">
 						<ul class="breadcrumb">
-							<li><a href="/schereg/schema">Schema Registry</a> <span class="divider">›</span></li>
-							<li class="active">Schema Registry</li>
+							<li><a href="/schereg/schema">MyAwesomeTool</a>
+								<span class="divider">›</span>
+							</li>
+							<li class="active">Home</li>
 						</ul>
-						<a id="btn-new-schema" class="btn btn-inverse pull-right" href="/schereg/schema/new"><i class="icon-plus icon-white"></i> Schema eintragen</a>
-						<h1>Schema Registry</h1>
+						<h1>MyAwesomeTool</h1>
 						<div id="contentInner">
-							<div>	
-								<table class="table table-bordered table-striped table-hover model-list model-list-50">
-									<thead>
-										<tr>
-											<th class="hide"></th>
-											<th></th>
-											<th width="100%">Name</th>
-											<th>Schema-Typ</th>
-											<th>Zuletzt geändert</th>
-											<th></th>
-										</tr>
-									</thead>
-									<tbody>
+							<h2>Purpose</h2>
+							<p>The purpose of this template is to ...</p>
 
-										
-
-
-
-
-
-
-
-
-
-										<tr id="model_id_100000" 
-										class="
-										">
-										<td id="model_id_100000.lookupTimestamp" class="hide">20130805120250781+0200</td>
-										<td id="model_id_100000.state">
-											<i id="model_id_100000.state.0" class="icon-refresh icon-black hidden"></i>
-											<i id="model_id_100000.state.1" class="icon-refresh icon-black hidden"></i>
-											<i id="model_id_100000.state.2" class="icon-ok icon-black "></i>
-											<i id="model_id_100000.state.9" class="icon-warning-sign icon-black hidden"></i>
-										</td>
-										<td style="white-space: normal;" id="model_id_100000.name">
-											<a href="/schereg/schema?schema=100000&v=0">oai_dc (100000)</a>
-										</td>
-										<td id="model_id_100000.type">
-											<a href="/schereg/schema?schema=100000&v=0">XML Schema</a>
-										</td>
-										<td id="model_id_100000.modified">
-											<a href="/schereg/schema?schema=100000&v=0">05.08.13 12:02:50</a>
-										</td>
-										<td id="model_id_100000.actions" class="actions">
-											<div class="modelLoading">
-												<i class="icon-refresh icon-black"></i> Busy...
-											</div>	
-											<div class="modelActions">
-												<a data-placement="top" rel="tooltip" title="Delete schema" onclick="if(confirm('Möchten Sie dieses Schema löschen?')){ deleteSchema(100000); return false;}" href="#">
-													<i class="icon-remove icon-black"></i>
-												</a>
-												<a data-placement="top" rel="tooltip" onclick="editSchema(100000); return false;" href="/schereg/schema/edit?schema=100000&v=0" title="Edit schema">
-													<i class="icon-edit icon-black"></i>
-												</a>
-											</div>
-										</td>
-									</tr>
-									
-
-
-
-
-
-
-
-
-
-
-									<tr id="model_id_100023" 
-									class="
-									">
-									<td id="model_id_100023.lookupTimestamp" class="hide">20130805181453152+0200</td>
-									<td id="model_id_100023.state">
-										<i id="model_id_100023.state.0" class="icon-refresh icon-black hidden"></i>
-										<i id="model_id_100023.state.1" class="icon-refresh icon-black hidden"></i>
-										<i id="model_id_100023.state.2" class="icon-ok icon-black "></i>
-										<i id="model_id_100023.state.9" class="icon-warning-sign icon-black hidden"></i>
-									</td>
-									<td style="white-space: normal;" id="model_id_100023.name">
-										<a href="/schereg/schema?schema=100023&v=0">XMetaDissPlus (100023)</a>
-									</td>
-									<td id="model_id_100023.type">
-										<a href="/schereg/schema?schema=100023&v=0">XML Schema</a>
-									</td>
-									<td id="model_id_100023.modified">
-										<a href="/schereg/schema?schema=100023&v=0">05.08.13 18:14:53</a>
-									</td>
-									<td id="model_id_100023.actions" class="actions">
-										<div class="modelLoading">
-											<i class="icon-refresh icon-black"></i> Busy...
-										</div>	
-										<div class="modelActions">
-											<a data-placement="top" rel="tooltip" title="Delete schema" onclick="if(confirm('Möchten Sie dieses Schema löschen?')){ deleteSchema(100023); return false;}" href="#">
-												<i class="icon-remove icon-black"></i>
-											</a>
-											<a data-placement="top" rel="tooltip" onclick="editSchema(100023); return false;" href="/schereg/schema/edit?schema=100023&v=0" title="Edit schema">
-												<i class="icon-edit icon-black"></i>
-											</a>
-										</div>
-									</td>
-								</tr>
-
-
-
-
-
-
-
-
-
-
-
-								<tr id="model_id_101362" 
-								class="
-								">
-								<td id="model_id_101362.lookupTimestamp" class="hide">20130805190551517+0200</td>
-								<td id="model_id_101362.state">
-									<i id="model_id_101362.state.0" class="icon-refresh icon-black hidden"></i>
-									<i id="model_id_101362.state.1" class="icon-refresh icon-black hidden"></i>
-									<i id="model_id_101362.state.2" class="icon-ok icon-black "></i>
-									<i id="model_id_101362.state.9" class="icon-warning-sign icon-black hidden"></i>
-								</td>
-								<td style="white-space: normal;" id="model_id_101362.name">
-									<a href="/schereg/schema?schema=101362&v=0">CMDI Header (101362)</a>
-								</td>
-								<td id="model_id_101362.type">
-									<a href="/schereg/schema?schema=101362&v=0">XML Schema</a>
-								</td>
-								<td id="model_id_101362.modified">
-									<a href="/schereg/schema?schema=101362&v=0">05.08.13 19:05:51</a>
-								</td>
-								<td id="model_id_101362.actions" class="actions">
-									<div class="modelLoading">
-										<i class="icon-refresh icon-black"></i> Busy...
-									</div>	
-									<div class="modelActions">
-										<a data-placement="top" rel="tooltip" title="Delete schema" onclick="if(confirm('Möchten Sie dieses Schema löschen?')){ deleteSchema(101362); return false;}" href="#">
-											<i class="icon-remove icon-black"></i>
-										</a>
-										<a data-placement="top" rel="tooltip" onclick="editSchema(101362); return false;" href="/schereg/schema/edit?schema=101362&v=0" title="Edit schema">
-											<i class="icon-edit icon-black"></i>
-										</a>
-									</div>
-								</td>
-							</tr>
-
-						</tbody>
-					</table>
-				</div>
-
-				<div class="model-details">
-					<ul class="nav nav-tabs">
-
-						<li class="active"><a href="/schereg/schema?v=0">Eigenschaften</a></li>
-
-
-
-
-						<li><a href="/schereg/schema?v=1">Crosswalks</a></li>
-
-
-
-						<li><a href="/schereg/schema?v=2">Kollektionen</a></li>
-
-					</ul>
-					<div class="model-details-container">
-
-
-						Please select a schema in the list on the left!
-
+							<h2>Notes</h2>
+							<p>TBD</p>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		</div>
-		</div>
-
-
-		<div class="row-fluid">
-			<div class="span10 offset1 no-margin footer">
-				<span>&copy; 2013 DARIAH-DE</span>
-				<ul class="pull-right inline">
-					<li><a href="#">Datenschutz</a></li>
-					<li><a href="#">Impressum</a></li>
-					<li><a href="#">Kontakt</a></li>
-				</ul>
+			<div class="row-fluid">
+				<div class="span10 offset1 no-margin footer">
+					<span>&copy; 2013 DARIAH-DE</span>
+					<ul class="pull-right inline">
+						<li><a href="#">Datenschutz</a></li>
+						<li><a href="#">Impressum</a></li>
+						<li><a href="#">Kontakt</a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
-
-		</div>
+		<!--
 		<div id="notes">
 			<div id="top_messages">
 				<ul>
-
+					<li>blub</li>
 				</ul>
 			</div>
 			<div style="float: left">&nbsp;</div>
 		</div>	
+		-->
 		<noscript>
 			<div>Die DARIAH-DE Generische Suche funktioniert derzeit nur mit aktiviertem JavaScript!</div>
 		</noscript>	  	

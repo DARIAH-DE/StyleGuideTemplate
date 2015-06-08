@@ -151,6 +151,11 @@ body {
  * Primary Navigation
  */
 
+ .navbar .nav {
+ 	/*margin-top: 16px;
+ 	margin-bottom: 10px;*/
+ }
+
 .nav-list.nav-primary-dariah {
 	padding-left: 0;
 	padding-right: 0;
@@ -382,7 +387,7 @@ figcaption {
         box-shadow: none !important;
         text-shadow: none !important;
     }
-    
+
     a,
     a:visited {
         text-decoration: underline;
