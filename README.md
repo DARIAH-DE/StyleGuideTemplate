@@ -6,5 +6,8 @@
 * this template requires Bootstrap (2.2.2) and jQuery (1.8.2) 
 * the goal is to facilitate the development of interfaces for web tools that are part of DARIAH-DE
 
+## How to Use It?
 
+* use the file `index.html` as a template for all `*.html` files of your application
 
+* the `resources` folder needs to be kept within the same folder where the `.html` files are 
