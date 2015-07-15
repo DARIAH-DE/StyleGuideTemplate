@@ -7,26 +7,25 @@
 		<meta name="author" content="Tobias Gradl, University of Bamberg">
 		<meta name="description" content="DARIAH-DE Generic Search">
 		<!-- CSS Imports -->
-		<link rel="stylesheet" href="resources/css/bootstrap.css" type="text/css" media="screen, projection" />
-		<link rel="stylesheet" href="resources/css/bootstrap-responsive.css" type="text/css" media="screen, projection" />
-		<link rel="stylesheet" href="resources/css/application.css" type="text/css" media="screen, projection" />
-		<link rel="stylesheet" href="resources/css/bootstrap-customization.css" type="text/css" media="screen, projection" />
-		<link rel="stylesheet" href="resources/css/bootstrap-modal.css" type="text/css" media="screen, projection" />
-		<link rel="stylesheet" href="resources/css/font-awesome.css">
+		<link rel="stylesheet" href="/resources/css/bootstrap.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="/resources/css/bootstrap-responsive.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="/resources/css/application.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="/resources/css/bootstrap-customization.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="/resources/css/bootstrap-modal.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="/resources/css/font-awesome.css">
 
 
 		<!-- JavaScript files at the end for faster loading of documents -->
 
-		<script type="text/javascript" src="resources/js/jquery-1.8.2.js"></script>
-
-		<script type="text/javascript" src="resources/js/bootstrap.js"></script>
+		<script type="text/javascript" src="/resources/js/jquery-1.8.2.js"></script>
+		<script type="text/javascript" src="/resources/js/bootstrap.js"></script>
 
 
 		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 		    <!--[if lt IE 9]>
 		      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		      <![endif]-->
-		      <link rel="shortcut icon" type="image/png" href="resources/img/page_icon.png" />
+		      <link rel="shortcut icon" type="image/png" href="/resources/img/page_icon.png" />
 	</head>
 	<body>
 	  	<div class="navbar navbar-inverse navbar-static-top navbar-dariah" id="top">
@@ -40,19 +39,21 @@
 	  							<span class="icon-bar"></span>
 	  							<span class="icon-bar"></span>
 	  						</a>
+	  						<!--
+	  						<a class="brand" href="/schereg/">
+	  							<img src="/resources/img/dariah_white.png" height="35" width="121" alt="DARIAH-DE" />
+	  						</a>
+	  						-->
 	  						<div class="nav-collapse collapse">
 	  							<ul class="nav pull-right">									
 	  								<li class="dropdown">
-	  									<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-globe icon-white"></i> 
+	  									<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa-globe icon-white"></i> 
 	  										Language <span class="caret"></span>
 	  									</a>
 	  									<ul class="dropdown-menu">
-	  										<li><a href="?lang=de"><img src="resources/img/famfamfam_flag_icons/png/de.png" alt="German" /> German</a></li>
+	  										<li><a href="?lang=en"><img src="/resources/famfamfam_flag_icons/png/gb.png" height="32" width="32" alt="English" /> English</a></li>
 	  										<li class="divider"></li>
-	  										<li><a href="?lang=en"><img src="resources/img/famfamfam_flag_icons/png/gb.png" alt="English" /> English</a></li>
-	  										<li class="divider"></li>
-	  										<li><a href="?lang=de"><img src="resources/img/famfamfam_flag_icons/png/fr.png" alt="German" /> French</a></li>
-	  										
+	  										<li><a href="?lang=de"><img src="/resources/famfamfam_flag_icons/png/de.png" height="32" width="32" alt="German" /> German</a></li>
 	  									</ul>
 	  								</li>
 	  								<li>
@@ -62,16 +63,11 @@
 									</li>	
 								</ul>
 								<ul class="nav">
-									<!--
-									Don't change this section! 
-									-->
 									<li class="dropdown">
 										<a class="brand dropdown-toggle" data-toggle="dropdown" href="#">
 											<span class="caret"></span>
-											<!--
-											<img src="resources/img/dariah_white.png" alt="DARIAH-DE" />
-											-->
-											DARIAH-DE
+										<!--<img src="/resources/img/dariah_white.png" height="35" width="121" alt="DARIAH-DE" />-->
+											DARIAH-DE 
 										</a>
 										<ul class="dropdown-menu">
 											<li class="dropdown-submenu">
@@ -80,8 +76,7 @@
 											    	<li><a href="http://dev3.dariah.eu/schereg/schema">DARIAH-DE Home</a></li>
 											      <li><a href="http://dev3.dariah.eu/schereg/schema">Schema Registry</a></li>
 											      <li><a href="https://colreg.de.dariah.eu/">Collection Registry</a></li>
-											      <li><a href="http://meise.de.dariah.eu">Meise 2</a></li>
-											      <li><a href="http://geobrowser.de.dariah.eu/">Geo-Browser</a></li>
+											      <li><a href="https://meise.de.dariah.eu">Meise 2</a></li>
 											      <li><a href="#">...</a></li>
 											    </ul>
 											  </li>
@@ -97,6 +92,27 @@
 
 										</ul>
 									</li>
+									<!--
+									<li  class="dropdown">
+										<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-white icon-star"></i> myFederation <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li class="nav-header">Personal Settings</li>
+											<li><a href="/schereg/user/profile"> My Profile</a></li>
+											<li><a href="/schereg/auth/saml/admin"> SAML Metadata Management</a></li>
+											
+											
+											<li class="divider"></li>
+											<li><a href="#"> Help</a></li>
+										</ul>
+									</li>
+									<li class="dropdown">
+										<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-white icon-search"></i> Suche <b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="http://search.de.dariah.eu/search/search/simple"> Einfache Suche</a></li>
+											<li><a href="http://search.de.dariah.eu/search/search/extended"> Erweiterte Suche </a></li>
+										</ul>
+									</li>
+									-->
 									<li  class="active"><a href="/schereg/schema">MyAwesomeTool</a></li>
 									<li ><a href="#">AnAwesomeRelatedTool</a></li>
 								</ul>
