@@ -2,11 +2,11 @@
 
 ![template screenshot](./screenshot_1.png)
 
-* based on Patrick Heck's DARIAH-DE template (patrick@patrickheck.de)
-* this template requires Bootstrap (2.2.2) and jQuery (1.8.2) 
-* the goal is to facilitate the development of interfaces for web tools that are part of DARIAH-DE
+The goal of this template is to facilitate the development of interfaces for web tools that are part of the DARIAH-DE ecosystem.
 
-## How to use this template?
+This template complements the report R. 1.2.2/R. 7.5 *Usability Criteria for External Requests of Collaboration*, specifically the *DARIAH-DE Style Guide* contained in the Appendix. 
+
+## How to view this template?
 
 1. `git clone` this repository
 2. `cd` into the `templates` directory
