@@ -32,7 +32,9 @@ body .narrow-modal {
 	border-top: 1px solid #DDDDDD;
 }
 
-
+hr {
+	border-top: 1px solid #DDDDDD;
+}
 
 
 .model-list a {
