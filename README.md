@@ -1,6 +1,6 @@
 # DARIAH-DE Style Guide Template
 
-![template screenshot](./screenshot_2.png)
+![template screenshot](./screenshot_1.png)
 
 The goal of this template is to facilitate the development of interfaces for web tools that are part of the DARIAH-DE ecosystem.
 
