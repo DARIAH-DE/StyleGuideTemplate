@@ -10,12 +10,10 @@
 
 1. `git clone` this repository
 2. `cd` into the `templates` directory
-3. launch a web server from terminla with `python -m SimpleHTTPServer 8000`
+3. launch a web server from terminal with `python -m SimpleHTTPServer 8000`
 4. open `localhost:8000` in a browser
 
 or just check it out at <http://dariah-de.github.io/StyleGuideTemplate/>
-
-* the `resources` folder needs to be kept within the same folder where the `.html` files are 
 
 ## Contact
 
