@@ -1,23 +1,20 @@
-<!DOCTYPE html>
-<html lang="de">
-	<head>
+<!doctype html>
+<html lang="de"><head>
 		<meta charset="utf-8">
 		<title>DARIAH-DE :: StyleGuideTemplate</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="author" content="Tobias Gradl, University of Bamberg">
 		<meta name="description" content="DARIAH-DE Generic Search">
 		<!-- CSS Imports -->
-		<link rel="stylesheet" href="resources/css/bootstrap.css" type="text/css" media="screen, projection" />
-		<link rel="stylesheet" href="resources/css/bootstrap-responsive.css" type="text/css" media="screen, projection" />
-		<link rel="stylesheet" href="resources/css/application.css" type="text/css" media="screen, projection" />
-		<link rel="stylesheet" href="resources/css/bootstrap-customization.css" type="text/css" media="screen, projection" />
-		<link rel="stylesheet" href="resources/css/bootstrap-modal.css" type="text/css" media="screen, projection" />
+		<link rel="stylesheet" href="resources/css/bootstrap.css" type="text/css" media="screen, projection">
+		<link rel="stylesheet" href="resources/css/application.css" type="text/css" media="screen, projection">
+		<link rel="stylesheet" href="resources/css/bootstrap-customization.css" type="text/css" media="screen, projection">
 		<link rel="stylesheet" href="resources/css/font-awesome.css">
 
 
 		<!-- JavaScript files at the end for faster loading of documents -->
 
-		<script type="text/javascript" src="resources/js/jquery-1.8.2.js"></script>
+		<script type="text/javascript" src="resources/js/jquery-1.11.3.js"></script>
 		<script type="text/javascript" src="resources/js/bootstrap.js"></script>
 
 
@@ -25,22 +22,22 @@
 		    <!--[if lt IE 9]>
 		      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		      <![endif]-->
-		      <link rel="shortcut icon" type="image/png" href="resources/img/page_icon.png" />
+		      <link rel="shortcut icon" type="image/png" href="resources/img/page_icon.png">
 	</head>
 	<body>
 	  	<div class="navbar navbar-inverse navbar-static-top navbar-dariah" id="top">
-	  		<div class="navbar-inner">
+	  		<div class="container">
 	  			<div class="container-fluid">
-	  				<div class="row-fluid">
-	  					<div class="span1"></div>
-	  					<div class="span10">
-	  						<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	  				<div class="row">
+	  					<div class="col-sm-1 col-md-1"></div>
+	  					<div class="col-sm-10 col-md-10">
+	  						<!--<a class="btn btn-navbar btn-default" data-toggle="collapse" data-target=".nav-collapse">-->
 	  							<span class="icon-bar"></span>
 	  							<span class="icon-bar"></span>
 	  							<span class="icon-bar"></span>
 	  						</a>
-	  						<div class="nav-collapse collapse">
-	  							<ul class="nav pull-right">									
+	  						<div class="collapse navbar-collapse">
+	  							<ul class="nav pull-right navbar-nav">									
 	  								<li class="dropdown">
 	  									<a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-globe icon-white"></i> 
 	  										Language <span class="caret"></span>
@@ -50,21 +47,21 @@
 	  									supported by your application
 	  									-->
 	  									<ul class="dropdown-menu" id="language_selection">
-	  										<li><a href="?lang=de"><img src="resources/img/famfamfam_flag_icons/png/de.png" alt="German" /> German</a></li>
+	  										<li><a href="?lang=de"><img src="resources/img/famfamfam_flag_icons/png/de.png" alt="German"> German</a></li>
 	  										<li class="divider"></li>
-	  										<li><a href="?lang=en"><img src="resources/img/famfamfam_flag_icons/png/gb.png" alt="English" /> English</a></li>
+	  										<li><a href="?lang=en"><img src="resources/img/famfamfam_flag_icons/png/gb.png" alt="English"> English</a></li>
 	  										<li class="divider"></li>
-	  										<li><a href="?lang=de"><img src="resources/img/famfamfam_flag_icons/png/fr.png" alt="German" /> French</a></li>
+	  										<li><a href="?lang=de"><img src="resources/img/famfamfam_flag_icons/png/fr.png" alt="German"> French</a></li>
 	  										
 	  									</ul>
 	  								</li>
 	  								<li>
-										<li>
-											<a href="#" ><i class="icon-signin icon-white"></i> Login</a>
+										</li><li>
+											<a href="#"><i class="icon-signin icon-white"></i> Login</a>
 										</li>
-									</li>	
+										
 								</ul>
-								<ul class="nav">
+								<ul class="nav pull-left">
 									<!--
 									Don't change this section! 
 									-->
@@ -108,7 +105,8 @@
 											  </li>
 										</ul>
 									</li>
-									<li  class="active"><a href="/schereg/schema">StyleGuideTemplate</a></li>
+									<li  class="active">
+									<a href="/">StyleGuideTemplate</a></li>
 								</ul>
 							</div>
 						</div>
@@ -116,14 +114,14 @@
 				</div>
 			</div>
 		</div>
-		<div id="content_layout" class="container-fluid">
+		<div id="content_layout" class="container">
 			<div style="height: 70px;"></div>
-			<div class="row-fluid">
-				<div class="span10 offset1 main-content-wrapper no-margin">
+			<div class="row">
+				<div class="main-content-wrapper no-margin col-lg-offset-1 col-sm-10 col-md-10">
 					<div id="content" class="primary-area">
 						<ul class="breadcrumb">
 							<li><a href="/schereg/schema">StyleGuideTemplate</a>
-								<span class="divider">›</span>
+								
 							</li>
 							<li class="active">Home</li>
 						</ul>
@@ -220,13 +218,16 @@
 				</div>
 			</div>
 			<div class="row-fluid">
-				<div id="footer" class="span10 offset1 no-margin footer">
-					<span>&copy; 2015 DARIAH-DE</span>
-					<ul class="pull-right inline">
-						<li><a href="#">Datenschutz</a></li>
-						<li><a href="#">Impressum</a></li>
-						<li><a href="#">Kontakt</a></li>
-					</ul>
+					<div class="row">
+						<div id="footer" class="no-margin footer col-lg-offset-1 col-sm-10 col-md-10">
+							<span>&copy; 2015 DARIAH-DE</span>
+							<ul class="pull-right list-inline">
+								<li><a href="#">Datenschutz</a></li>
+								<li><a href="#">Impressum</a></li>
+								<li><a href="#">Kontakt</a></li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -15,6 +15,9 @@
  * @section   Fonts
  * @see       http://www.exljbris.com/museo.html
  */
+
+/* Matteo test */
+
 @font-face {
     font-family: 'MuseoSansRounded700';
     src: url('../fonts/museosansrounded_700_macroman/MuseoSansRounded-700-webfont.eot');
@@ -480,4 +483,77 @@ figcaption {
 	.footer, .breadcrumb, .push, .navigation-wrapper, .navbar-static-top, .searchbar-dariah, .breadcrumb {
 		display: none;
 	}
+}
+
+/*
+
+adjusting CSS after migration to Bootstrap3
+
+*/
+
+.navbar.navbar-inverse.navbar-dariah {
+    background-color: #454545;
+    background-image: linear-gradient(to bottom, #454545, #454545);
+    background-repeat: repeat-x;
+    border-color: #454545;
+}
+
+.navbar {
+    font-size: 11.9px;
+    margin-bottom: 20px;
+    overflow: visible;
+}
+
+.navbar.navbar-inverse li.dropdown.open > .dropdown-toggle, .navbar.navbar-inverse li.dropdown.active > .dropdown-toggle, .navbar.navbar-inverse li.dropdown.open.active > .dropdown-toggle {
+    background-color: #454545;
+    color: #ffffff;
+}
+
+.navbar::before, .navbar::after {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+.navbar-inner::after {
+    clear: both;
+}
+.navbar .container {
+    width: auto;
+}
+.nav-collapse.collapse {
+    height: auto;
+    overflow: visible;
+}
+.navbar .brand {
+    color: #777777;
+    display: block;
+    float: left;
+    font-family: "MuseoSansRounded700";
+    font-size: 20px;
+    font-weight: normal;
+    margin-left: -20px;
+    padding: 6px 20px;
+    text-shadow: 0 1px 0 #ffffff;
+     background-color: transparent;
+}
+.navbar .brand:hover {
+    text-decoration: none;
+        background-color: transparent;
+    color: #ffffff;
+}
+
+.navbar .nav > li {
+    float: left;
+}
+.navbar .nav > li > a {
+    color: #777777;
+    float: none;
+    padding: 6px 15px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #ffffff;
+}
+
+.navbar-inverse .brand, .navbar-inverse .nav > li > a {
+    color: #999999;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
