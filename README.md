@@ -4,7 +4,7 @@
 
 The goal of this template is to facilitate the development of interfaces for web tools that are part of the DARIAH-DE ecosystem.
 
-This template complements the report R. 1.2.2/R. 7.5 *Usability Criteria for External Requests of Collaboration*, specifically the *DARIAH-DE Style Guide* contained in the Appendix. 
+This template complements the report [R. 1.2.2/R. 7.5 *Usability Criteria for External Requests of Collaboration*](https://wiki.de.dariah.eu/download/attachments/14651583/R1.2.2-7.5_final.pdf?version=1&modificationDate=1452850842838&api=v2), specifically the *DARIAH-DE Style Guide* contained in the Appendix. 
 
 ## How to view this template?
 
