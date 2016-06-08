@@ -45,12 +45,11 @@ $.getJSON( 'https://res.de.dariah.eu/globalmenu/menu.json', function( data ) {
     $( 'ul#home_dropdown_menu' ).append( lifromarrayitem(arrayitem) );
   });
 
-  // workaround for using global menu for mobile devices.
-  $('.dropdown-submenu').on('click tap', function() {
-    $(this).toggleClass("open");
-    return false;
-  });
-
 }).fail(function() {
   console.log( 'Error loading menu JSON!' );
+});
+
+// submenu workaround for mobiles. 
+$('.navbar-dariah').on('click tap', '.dropdown-submenu', function() {
+  $(this).toggleClass("open");return false;
 });
