@@ -10,12 +10,11 @@ $.getJSON( 'https://res.de.dariah.eu/globalmenu/menu.json', function( data ) {
   var lifromarrayitem = function (arrayitem) {
     // create an empty li
     var myobject = document.createElement('li');
-    var linktarget, tabindexstring;
+    var linktarget, tabindexstring, classString;
     if ('divider' in arrayitem) {
       // make it a divider
       $(myobject).addClass('divider');
     } else {
-      var linktarget, tabindexstring, classString;
       // check whether there is a link
       if ('link' in arrayitem) {
         linktarget = arrayitem['link'];
