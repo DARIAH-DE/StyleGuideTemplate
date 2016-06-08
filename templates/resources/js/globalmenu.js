@@ -10,7 +10,7 @@ $.getJSON( 'https://res.de.dariah.eu/globalmenu/menu.json', function( data ) {
   var lifromarrayitem = function (arrayitem) {
     // create an empty li
     var myobject = document.createElement('li');
-    var linktarget, tabindexstring;
+    var linktarget, tabindexstring, classString;
     if ('divider' in arrayitem) {
       // make it a divider
       $(myobject).addClass('divider');
@@ -19,12 +19,14 @@ $.getJSON( 'https://res.de.dariah.eu/globalmenu/menu.json', function( data ) {
       if ('link' in arrayitem) {
         linktarget = arrayitem['link'];
         tabindexstring = '';
+        classString = 'class="navtarget"';
       } else {
         linktarget = '#';
         tabindexstring = 'tabindex="-1"';
+        classString = '';
       }
       // add the link inside
-      $(myobject).html('<a '+ tabindexstring +' href="' + linktarget + '">' + arrayitem['title'] + '</a>');
+      $(myobject).html('<a '+ tabindexstring +' href="' + linktarget + '" '+classString+'>' + arrayitem['title'] + '</a>');
       // if the li has a submenu, add another ul
       if ('submenu' in arrayitem) {
         $(myobject).addClass('dropdown-submenu');
@@ -49,13 +51,17 @@ $.getJSON( 'https://res.de.dariah.eu/globalmenu/menu.json', function( data ) {
   console.log( 'Error loading menu JSON!' );
 });
 
-/*
+
 // submenu workaround for mobiles. 
 $(function() {
-  $('.navbar-dariah').on('touchstart click tap', '.dropdown-submenu', function(e) {
-    e.preventDefault();
-    $(this).toggleClass("open");
-    return false;
+  $('.navbar-dariah').on('touchstart click tap', 'li.dropdown-submenu > a', function(e) {
+    e.preventDefault(); // do not aktivate links
+    e.stopPropagation(); // do not propagate event to top eventHandlers
+    $(this).parent('li').toggleClass('open');
+  });
+
+  $('.navbar-dariah').on('touchstart click tap', 'a.navtarget', function(e) {
+    e.stopPropagation(); // do not propagate event to top eventHandlers
   });
 });
-*/
+
