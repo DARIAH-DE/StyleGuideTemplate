@@ -46,7 +46,7 @@ $.getJSON( 'https://res.de.dariah.eu/globalmenu/menu.json', function( data ) {
   });
 
   // (dirty) workaround for using global menu for mobile devices.
-  $('.dropdown-submenu').on('click tap', function() {
+  $('.navbar-dariah .dropdown-submenu').on('click tap', function() {
      $(this).toggleClass("open");
      return false;
   });
