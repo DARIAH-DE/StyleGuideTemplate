@@ -49,6 +49,7 @@ $.getJSON( 'https://res.de.dariah.eu/globalmenu/menu.json', function( data ) {
   console.log( 'Error loading menu JSON!' );
 });
 
+/*
 // submenu workaround for mobiles. 
 $(function() {
   $('.navbar-dariah').on('touchstart click tap', '.dropdown-submenu', function(e) {
@@ -57,4 +58,4 @@ $(function() {
     return false;
   });
 });
-
+*/
