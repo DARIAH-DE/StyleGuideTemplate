@@ -50,6 +50,8 @@ $.getJSON( 'https://res.de.dariah.eu/globalmenu/menu.json', function( data ) {
 });
 
 // submenu workaround for mobiles. 
-$('.navbar-dariah').on('click tap', '.dropdown-submenu', function() {
-  $(this).toggleClass("open");return false;
+$(function() {
+  $('.navbar-dariah').on('click tap', '.dropdown-submenu', function() {
+    $(this).toggleClass("open");return false;
+  });
 });
