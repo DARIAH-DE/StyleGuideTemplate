@@ -54,5 +54,6 @@ $(function() {
   $('.navbar-dariah').on('touchstart click tap', '.dropdown-submenu', function(e) {
     e.preventDefault();
     $(this).toggleClass("open");
+    return false;
   });
 });
