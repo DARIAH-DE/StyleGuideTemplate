@@ -57,6 +57,12 @@ $(function() {
   $('.navbar-dariah').on('touchstart click tap', 'li.dropdown-submenu > a', function(e) {
     e.preventDefault(); // do not aktivate links
     e.stopPropagation(); // do not propagate event to top eventHandlers
+	
+	//close other submenus
+    $('li.dropdown-submenu').each(function( index ){
+    	$(this).removeClass('open');
+    });
+	
     $(this).parent('li').toggleClass('open');
   });
 
