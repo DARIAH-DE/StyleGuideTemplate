@@ -20,3 +20,11 @@ or just check it out at <http://dariah-de.github.io/StyleGuideTemplate/>
 This template was packaged together by [Matteo Romanello](https://github.com/mromanello) and is based on the layout design by [Patrick Heck](https://github.com/patrickheck).
 
 For bugs, feature requests etc. please use the [github issue tracker](https://github.com/DARIAH-DE/StyleGuideTemplate/issues).
+
+## Global Menu
+
+To ensure the global navigation menu remains consistent accross all services, make sure to use a minimal `ul` with `id="home_dropdown_menu"` as in the template and to include
+```html
+<script type="text/javascript" src="resources/js/globalmenu.js"></script>
+```
+which will load the central version.
