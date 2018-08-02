@@ -1,0 +1,171 @@
+html {
+	height: 100%;
+	min-width: 300px;
+	overflow-y: scroll;
+}
+
+// NOTE: Setting "word-wrap: break-word" on body leads to some weird breaks
+// within headings on Chrome Mobile
+body {
+	background: #fff;
+	color: $text-color;
+	font: #{$font-size} / $line-height $font;
+}
+
+address,
+blockquote,
+dl,
+figure,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+p,
+pre,
+table,
+ul {
+	@include limited-width;
+	margin: 0 auto ($grid / 2);
+}
+
+// 1. Prevent long link texts from messing up the layout (which shouldn't be
+// inserted in the first place, but don't have control about that).
+a {
+	@include transition(border, color);
+	border-bottom: $border-width solid $border-color;
+	color: $link-color;
+	text-decoration: none;
+	word-wrap: break-word; // 1
+
+	@include hover {
+		border-color: $link-hover-color;
+		color: $link-hover-color;
+	}
+}
+
+abbr {
+	cursor: help;
+}
+
+address {
+	font-style: normal;
+}
+
+blockquote {
+	background: $shade-weak;
+	border-radius: $br;
+	color: $text-color-light;
+	font-style: italic;
+	padding: ($grid / 2);
+	position: relative;
+	text-shadow: 0 1px 0 $shine-strong;
+
+	@media #{$small} {
+		padding: ($grid / 2);
+	}
+
+	> footer {
+		font-size: $font-size-small;
+		font-style: normal;
+		text-align: right;
+
+		> cite::before {
+			content: '\2014\00a0'; // em dash + non-breaking space
+		}
+	}
+}
+
+cite {
+	color: $text-color-light;
+	font-style: normal;
+}
+
+code {
+	background: $shade-weak;
+	border-radius: $br;
+	font-size: $font-size-mono;
+	line-height: 1.5;
+}
+
+figcaption {
+	font-size: $font-size-small;
+}
+
+figure {
+	max-width: $media-width;
+	position: relative;
+}
+
+h1 {
+	@include heading(1);
+
+	&:nth-child(n+2) {
+		margin-top: ($grid * 1.5);
+	}
+}
+
+h2 {
+	@include heading(2);
+}
+
+h3 {
+	@include heading(3);
+}
+
+h4 {
+	@include heading(4);
+}
+
+h5 {
+	@include heading(5);
+}
+
+h6 {
+	@include heading(6);
+}
+
+hr {
+	border: 0;
+	border-top: $border-width solid $border-color;
+	margin: ($grid - $border-width) auto $grid;
+}
+
+img {
+	border-radius: $br;
+	display: block;
+	max-width: 100%;
+
+	// https://github.com/csswizardry/inuit.css/pull/111#issuecomment-12562366
+	&[width],
+	&[height] {
+		max-width: none;
+	}
+}
+
+p {
+	@include clearfix;
+}
+
+pre {
+	background: $shade-weak;
+	border-radius: $br;
+	font-size: $font-size-mono;
+	line-height: 1.5;
+	overflow: auto;
+	padding: ($grid / 2);
+
+	> code {
+		background: none;
+		display: inline-block;
+		line-height: inherit;
+	}
+}
+
+small {
+	font-size: #{($font-size-small / $font-size)}em;
+	line-height: round($grid * 2 / 3);
+}

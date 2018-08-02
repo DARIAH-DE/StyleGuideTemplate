@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+	<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+	<link rel="stylesheet" href="assets/styles.css">
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<script src="assets/script.js" defer></script>
+	<title>Select Your Organisation | DARIAH-DE</title>
+</head>
+
+<body class="site -no-header">
+	<div class="site_wrap">
+		<div class="logo">
+			<a class="logo_link -aai" href="" title="Startseite">
+				<img class="logo_logo -aai" src="assets/logos/dariah-aai-logo.svg" alt="DARIAH Authentication Authorisation Infrastructure">
+				<svg class="logo_logo -aai -spike" xmlns="http://www.w3.org/2000/svg" width="792.966" height="184" viewBox="0 0 792.966 184">
+					<path d="M503.056 78.332l-78.76-57.22-78.759 57.22 30.084 92.59h97.352z" />
+				</svg>
+			</a>
+		</div>
+
+		<main class="main">
+			<div class="main_title">
+				<h1 class="main_heading">Select Your Organisation</h1>
+			</div>
+
+			<div class="main_content -narrow">
+				<p class="center">
+					<a class="main_button" href="#">
+						Continue to DARIAH login
+						<svg class="icon">
+							<use xlink:href="#icon-angle-right"></use>
+						</svg>
+					</a>
+				</p>
+				<hr>
+				<form action="https://idp.de.dariah.eu/idp/profile/SAML2/Redirect/SSO;jsessionid=TODO?execution=e1s1" method="post">
+					<p>
+						<label for="organisation">Organisation</label>
+						<input id="organisation" type="text" placeholder="Enter the name of the organisation you are affiliated with &hellip;">
+					</p>
+					<p>
+						<span class="sr-only">Name</span>
+						<input id="remember" type="checkbox" checked>
+						<label for="remember">Remember selection for this browser session</label>
+					</p>
+					<p>
+						<span class="sr-only">Name</span>
+						<input id="forever" type="checkbox">
+						<label for="forever">Remember selection permanently and bypass this step from now on</label>
+					</p>
+					<p class="center margin-top">
+						<button type="submit" name="_eventId_proceed">Select</button>
+					</p>
+				</form>
+			</div>
+		</main>
+	</div>
+
+	<footer class="footer">
+		<div class="wrap -narrow">
+			<div class="footer_left">
+				<div>
+					<p>
+						<a href="impressum/">Impressum</a>
+						<a href="datenschutz/">Datenschutz</a>
+						<a href="kontakt/">Kontakt</a>
+						<a href="index.html">Sitemap</a>
+					</p>
+				</div>
+				<div>
+					<p>
+						Alle Inhalte dieser Seite unterliegen der
+						<a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0-Lizenz</a>,
+						sofern nicht anders gekennzeichnet.
+					</p>
+				</div>
+				<p>
+					<a href="">
+						DARIAH-DE
+						<br>
+						<small>Digitale Forschungsinfrastruktur für die Geistes- und Kulturwissenschaften</small>
+					</a>
+				</p>
+			</div>
+			<div class="footer_right">
+				<p>
+					<a href="https://www.bmbf.de/">
+						<img alt="Gefördert vom Bundesministerium für Bildung und Forschung" src="assets/logos/bmbf-logo.svg" height="108">
+					</a>
+				</p>
+				<p>
+					<small>Förderkennzeichen 01UG1610A bis J</small>
+				</p>
+			</div>
+		</div>
+	</footer>
+
+	<svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+		<symbol id="icon-angle-right" viewBox="0 0 17 17">
+			<path d="M13.207 8.472l-7.854 7.854-.707-.707 7.146-7.146-7.146-7.148.707-.707 7.854 7.854z" />
+		</symbol>
+	</svg>
+</body>

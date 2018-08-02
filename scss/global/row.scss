@@ -1,0 +1,31 @@
+.row {
+	display: table;
+	margin: $grid auto;
+	table-layout: fixed;
+	width: 100%;
+
+	@media #{$medium} {
+		// TODO: Images get too large on medium, see featured image in blog posts
+		@include limited-width;
+		display: block;
+	}
+
+	&:not(:first-child) {
+		border-top: $border-width solid $border-color;
+		padding-top: ($grid - $border-width);
+	}
+
+	&:not(:last-child) {
+		border-bottom: $border-width solid $border-color;
+		padding-bottom: ($grid - $border-width);
+	}
+
+	&.-narrow {
+		max-width: $content-width;
+	}
+
+	.banner + & {
+		border-top: 0;
+		padding-top: 0;
+	}
+}

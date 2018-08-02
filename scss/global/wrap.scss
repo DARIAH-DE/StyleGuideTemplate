@@ -1,0 +1,16 @@
+$max-width: 1000px !default;
+
+.wrap {
+	@include clearfix;
+	margin: 0 auto;
+	max-width: $max-width;
+	position: relative;
+
+	&.-narrow {
+		@include limited-width;
+	}
+
+	.site.-full-width & {
+		max-width: none;
+	}
+}

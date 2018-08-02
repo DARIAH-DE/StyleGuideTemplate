@@ -1,0 +1,24 @@
+$typo-min-line-height-ratio: .5 !default;
+$typo-scale-ratio: 1.25 !default;
+$typo-scale-sizing-factor: 1 !default;
+
+@mixin typo-scale($increment) {
+	font-size: round(ms($increment) * $typo-scale-sizing-factor);
+	line-height: floor(ms($increment) * $typo-scale-sizing-factor / ($line-height * $typo-min-line-height-ratio) + 1)
+		* $typo-min-line-height-ratio * $line-height;
+}
+
+// From Chopstick v0.3.3
+@function ms($increment, $value: $font-size, $ratio: $typo-scale-ratio) {
+	@if $increment > 0 {
+		@for $i from 1 through $increment {
+			$value: ($value * $ratio);
+		}
+	} @else {
+		$increment: abs($increment);
+		@for $i from 1 through $increment {
+			$value: ($value / $ratio);
+		}
+	}
+	@return $value;
+}

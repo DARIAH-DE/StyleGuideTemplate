@@ -1,0 +1,106 @@
+.main {
+	@include transition(filter);
+	overflow: hidden;
+	padding: $grid;
+	position: relative;
+	z-index: 1;
+
+	@media #{$medium} {
+		padding: $grid ($grid / 2);
+	}
+
+	button {
+		min-width: round($grid * 5.618);
+	}
+}
+
+.main_button {
+	@include caps;
+	@include transition(background);
+	border: $border-width solid $link-color;
+	border-radius: $br;
+	display: inline-block;
+	margin: 0 auto;
+	padding: ($grid / 2 - $border-width) ($grid - $border-width);
+
+	@include hover {
+		background: $shade-weak;
+	}
+
+	&:active {
+		background: $shade;
+	}
+
+	// TODO: What about icons to the left?
+	> .icon {
+		margin: -1px -5px 1px 0; // Align arrow-right
+	}
+}
+
+.main_content {
+	&.-narrow {
+		@include limited-width;
+	}
+}
+
+.main_notice {
+	box-shadow: 0 0 $border-width $text-color inset;
+	color: $text-color-light;
+	border-radius: $br;
+	display: inline-block;
+	font-size: $font-size-small;
+	margin: ($grid / 4) auto ($grid * .75);
+	padding: ($grid / 4) ($grid / 2);
+	position: relative;
+	top: (-$grid / 2);
+
+	&.-big {
+		display: block;
+		font-size: $font-size;
+		font-weight: bold;
+		margin: 0 auto $grid;
+		padding: ($grid / 2) ($grid);
+		text-align: center;
+		top: 0;
+	}
+
+	&.-error {
+		background: rgba($error-color, .12);
+		box-shadow: 0 0 $border-width $error-color inset;
+		color: $error-color;
+	}
+
+	&.-success {
+		background: rgba($success-color, .12);
+		box-shadow: 0 0 $border-width $success-color inset;
+		color: $success-color;
+	}
+
+	&.-warning {
+		background: rgba($warning-color, .12);
+		box-shadow: 0 0 $border-width $warning-color inset;
+		color: $warning-color;
+	}
+}
+
+.main_title {
+	text-align: center;
+
+	&::before {
+		background: $logo-color-4;
+		border-radius: 1.5px;
+		content: '';
+		display: block;
+		height: 3px; // Approximately match stroke width of font
+		margin: -11px auto 0; // Match vertical margins around logo
+		width: ($grid * 10);
+	}
+
+ 	// Together with the top-alignment, the margins above and below the heading
+	// happen to match the 1.618 fold of the vertical margins around the logo :)
+	> h1 {
+		margin: $grid auto;
+		position: relative;
+		top: 3px; // Center vertically optically
+	}
+}

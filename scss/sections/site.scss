@@ -1,0 +1,17 @@
+// 1. Avoid the IE 10-11 `min-height` bug. Use `%` instead of `vh` since `vh` is buggy in older mobile Safari.
+.site {
+	@include transition(transform);
+	display: table;
+	height: 100%; // 1
+	table-layout: fixed;
+	width: 100%;
+
+	&.-no-header {
+		border-top: ($grid / 2) solid $primary-color;
+	}
+}
+
+.site_wrap {
+	display: table-row;
+	height: 100%;
+}

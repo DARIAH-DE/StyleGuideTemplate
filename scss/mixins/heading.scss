@@ -1,0 +1,42 @@
+@mixin heading($level) {
+	@if $level == 1 {
+		@include typo-scale(2);
+		color: $primary-color;
+		font-family: $heading-font; // TODO
+		font-weight: normal;
+		margin: 0 auto $grid;
+	} @else if $level == 2 {
+		@include typo-scale(1);
+		color: $heading-color;
+		font-family: $heading-font;
+		font-weight: normal;
+		margin: $grid auto ($grid / 2);
+	} @else if $level == 3 {
+		color: $heading-color;
+		font: inherit;
+		letter-spacing: 1px;
+		margin: $grid auto ($grid / 2);
+		text-transform: uppercase;
+	} @else if $level == 4 {
+		color: $text-color-light;
+		font-size: $font-size-small;
+		font-weight: bold;
+		letter-spacing: 1px;
+		line-height: $line-height;
+		margin: $grid auto ($grid / 2);
+		text-transform: uppercase;
+	} @else if $level == 5 {
+		color: $text-color-light;
+		font-size: $font-size-small;
+		font-weight: normal;
+		line-height: $line-height;
+		margin: ($grid / 2) auto;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	} @else if $level == 6 {
+		color: $text-color-light;
+		font-size: $font-size;
+		font-weight: bold;
+		margin-bottom: 0;
+	}
+}

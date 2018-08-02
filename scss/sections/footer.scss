@@ -1,0 +1,77 @@
+.footer {
+	background: $light-grey url(grain.png);
+	color: shade($text-color, 50);
+	font-size: $font-size-small;
+	padding: ($grid / 2) $grid;
+	text-shadow: $outset-shadow;
+
+	@media #{$medium} {
+		padding: ($grid / 2);
+	}
+
+	p {
+		max-width: none;
+	}
+}
+
+.footer_left {
+	float: left;
+	width: 61.8%;
+
+	@media #{$small} {
+		text-align: center;
+		width: 100%;
+	}
+
+	a {
+		border-color: transparent;
+
+		@include hover {
+			border-bottom: $border-width solid $link-hover-color;
+		}
+	}
+
+	a + a {
+		margin-left: 1em;
+	}
+
+	> :last-child {
+		margin-bottom: 0;
+	}
+}
+
+.footer_right {
+	float: right;
+	text-align: right;
+	width: 38.2%;
+
+	@media #{$small} {
+		margin-top: $grid;
+		text-align: center;
+		width: 100%;
+	}
+
+	// BMBF logo
+	a {
+		@include transition(background);
+		border: 0;
+		border-radius: $br;
+		float: right;
+		margin: (-$grid / 4) 0;
+		padding: ($grid / 4);
+
+		@media #{$small} {
+			display: inline-block;
+			float: none;
+			margin-bottom: (-$grid / 2); // TODO: Check vertical margin
+		}
+
+		@include hover {
+			background: $shade-weak;
+		}
+	}
+
+	> :last-child {
+		margin-bottom: 0;
+	}
+}

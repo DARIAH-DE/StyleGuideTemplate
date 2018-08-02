@@ -1,0 +1,71 @@
+// Base colors
+$logo-color-1: #213365;
+$logo-color-2: #424569;
+$logo-color-3: #494e7d;
+$logo-color-4: #727299;
+
+$primary-color: $logo-color-1;
+$secondary-color: $logo-color-3;
+
+$light-grey: #f7f7f7;
+
+// Shades and shines
+$shade-strong: rgba(#000, .18);
+$shade-weak: rgba(#000, .06);
+$shade: rgba(#000, .12);
+
+$shine: rgba(#fff, .12);
+$shine-weak: rgba(#fff, .06);
+$shine-strong: rgba(#fff, .18);
+$shine-strongest: rgba(#fff, .24);
+
+// Semantic colors
+$border-color: #ccc;
+$heading-color: $logo-color-4;
+$link-color: $secondary-color;
+$link-hover-color: shade($link-color, 30);
+$text-color: #333;
+$text-color-light: tint($text-color, 30); // Beware WGAC AA
+
+$error-color: adjust-hue($primary-color, 135);
+$success-color: adjust-hue($primary-color, 225);
+$warning-color: adjust-hue($primary-color, 180);
+
+// Dimensions
+$br: 2px; // border radius
+$grid: 24px;
+
+$border-width: 1px;
+$content-width: ($grid * 30); // 720px
+$media-width: ($grid * 40); // 960px
+$max-width: ($grid * 50); // 1200px
+
+// Breakpoints
+$large: (max-width: 1247px);
+$medium: (max-width: 1023px);
+$small: (max-width: 719px);
+$tiny: (max-width: 479px);
+
+// Typography
+$font: Roboto, Arial, Helvetica, sans-serif;
+$heading-font: MuseoSansRounded, Arial, Helvetica, sans-serif;
+$caps-font: $heading-font;
+
+$font-size: 16px;
+$font-size-mono: 14px;
+$font-size-small: 14px;
+$font-size-caps: 13px;
+
+$line-height: $grid;
+
+$typo-scale-ratio: 5 / 4;
+
+// Timing
+$transition-duration-in: 0s;
+$transition-duration-out: .2s;
+
+// Combined values
+$card-shadow: 0 .5px 2px $shade-strong;
+$drop-shadow: 0 ($grid / 16) ($grid / 4) $shade-strong;
+$inset-shadow: 0 -1px $shade-strong;
+$outset-shadow: 0 1px $shine-strong;
