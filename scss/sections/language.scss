@@ -1,0 +1,69 @@
+.language {
+	float: left;
+	position: relative;
+}
+
+.language_toggle {
+	@include header-link;
+	@include transition(background);
+	font: inherit;
+	text-transform: none;
+
+	@media #{$small} {
+		padding: ($grid / 2);
+	}
+
+	&.-open {
+		background: $secondary-color;
+		box-shadow: none;
+		outline: 0; // Prevent ouline from popping up on mouse out, sacrificing a11y
+	}
+
+	.icon {
+		margin: 0 .2em 0 0;
+		top: -1px;
+
+		+ .icon {
+			margin: 0 0 0 .2em;
+		}
+	}
+}
+
+.language_label {
+	&.-large {
+		@media #{$tiny} {
+			display: none;
+		}
+	}
+
+	&.-small {
+		display: none;
+		font-family: $heading-font;
+		text-transform: uppercase;
+
+		@media #{$tiny} {
+			display: inline;
+		}
+	}
+}
+
+// TODO: Merge with nav_list.-level-2
+.language_list {
+	@include dropdown;
+	left: 0;
+	min-width: 100%;
+}
+
+.language_link {
+	@include header-link;
+	border-radius: $br;
+	display: block;
+	padding: ($grid / 2);
+	text-align: left;
+}
+
+.language_item {
+	&::before {
+		content: none;
+	}
+}

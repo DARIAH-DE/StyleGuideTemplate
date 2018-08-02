@@ -1,0 +1,51 @@
+dt {
+	color: $text-color-light;
+	font-weight: bold;
+}
+
+dd {
+	margin-left: 2rem;
+}
+
+dd + dt {
+	margin-top: $grid;
+}
+
+ol,
+ul {
+	padding-left: 2rem;
+
+	ol,
+	ul {
+		margin-bottom: 0;
+	}
+}
+
+ol {
+	list-style: decimal;
+}
+
+ul {
+	list-style: none;
+
+	// List bullet
+	// TODO: List items are not indented when placed next to floating elements
+	> li::before {
+		background: $secondary-color;
+		border-radius: $br;
+		content: '';
+		height: round($grid / 4);
+		margin: .75em 0 0 -.5em;
+		position: absolute;
+		transform: translate(-100%, -50%);
+		width: round($grid / 4);
+	}
+}
+
+li {
+	> p {
+		margin-bottom: 0;
+	}
+}
+
+

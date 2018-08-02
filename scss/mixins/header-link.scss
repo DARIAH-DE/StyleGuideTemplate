@@ -1,0 +1,21 @@
+@mixin header-link {
+	background: none;
+	border-radius: 0;
+	border: 0;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	min-width: ($grid * 2.5);
+	padding: ($grid * .75) ($grid / 2);
+	text-align: center;
+
+	@include hover {
+		background: $shine-weak;
+		color: #fff;
+	}
+
+	@media #{$large} {
+		min-width: ($grid * 2);
+		padding: ($grid / 2);
+	}
+}

@@ -1,0 +1,14 @@
+$woff2-enabled: true !default;
+
+@mixin font-face($family, $src, $style: normal, $weight: normal) {
+	@font-face {
+		font-family: $family;
+		@if $woff2-enabled {
+			src: url('#{$src}.woff2') format('woff2'), url('#{$src}.woff') format('woff');
+		} @else {
+			src: url('#{$src}.woff') format('woff');
+		}
+		font-style: $style;
+		font-weight: $weight;
+	}
+}

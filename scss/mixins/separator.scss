@@ -1,0 +1,24 @@
+@mixin separator($alignment: left) {
+	// Vertical line to the left
+	@if $alignment == left {
+		&::before {
+			border-left: 1px solid $shade;
+			border-right: 1px solid $shine;
+			content: '';
+			height: 100%;
+			margin: 0 0 0 -1px;
+			position: absolute;
+			transform: none;
+			width: 0;
+		}
+	} @elseif $alignment == bottom {
+		&::after {
+			border-top: 1px solid $shade;
+			border-bottom: 1px solid $shine;
+			content: '';
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+		}
+	}
+}

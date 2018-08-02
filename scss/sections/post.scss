@@ -1,0 +1,130 @@
+%post-image-margin {
+	margin-left: ($grid * 8.5);
+
+	@media #{$large} {
+		margin-left: ($grid * 7);
+	}
+
+	@media #{$medium} {
+		margin-left: ($grid * 5.5);
+	}
+
+	@media #{$tiny} {
+		margin-left: 0;
+	}
+}
+
+.post {
+	@include clearfix;
+	@include limited-width;
+	// @include transition(background);
+	border: 0;
+	border-radius: $br;
+	color: $text-color;
+	display: table-cell;
+	padding: ($grid / 2);
+
+	@include hover {
+		// background: $shade-weak;
+		color: $text-color;
+	}
+
+	@media #{$medium} {
+		display: block;
+		box-shadow: 0 1px $border-color;
+		padding: ($grid / 2) 0;
+		width: auto;
+	}
+
+	// &:active {
+	// 	background: $shade;
+	// }
+}
+
+.post_author {
+	color: $text-color-light;
+	font-size: $font-size-small;
+	margin-left: .5em;
+	line-height: 1;
+}
+
+.post_date {
+	color: $text-color-light;
+	font-size: $font-size-small;
+	font-weight: bold;
+	line-height: 1;
+}
+
+.post_excerpt {
+	.post.-image & {
+		@extend %post-image-margin;
+	}
+}
+
+.post_header {
+	@include limited-width;
+	margin: (-$grid / 4) 0 ($grid / 4);
+
+	&.-single {
+		margin: (-$grid / 4) auto $grid;
+		text-align: center;
+	}
+
+	.post.-image & {
+		@extend %post-image-margin;
+	}
+}
+
+.post_image {
+	@include transition(opacity);
+	float: left;
+	margin-left: (-$grid * 8.5);
+	width: ($grid * 7.5);
+
+	@media #{$large} {
+		margin-left: (-$grid * 7);
+		width: ($grid * 6.5);
+	}
+
+	@media #{$medium} {
+		margin-left: (-$grid * 5.5);
+		width: ($grid * 5);
+	}
+
+	@media #{$tiny} {
+		display: none;
+	}
+
+	@at-root {
+		.post {
+			@include hover {
+				.post_image {
+					opacity: .9;
+				}
+			}
+		}
+	}
+}
+
+.post_more {
+	white-space: nowrap;
+}
+
+.post_title {
+	@include transition(color);
+	margin: 0 0 ($grid / 2);
+
+	@at-root {
+		.post {
+			@include hover {
+				.post_title {
+					color: $link-hover-color;
+				}
+			}
+		}
+	}
+
+	.post.-image & {
+		@extend %post-image-margin;
+	}
+}

@@ -1,0 +1,20 @@
+@mixin clip($sides...) {
+	$top: -9999px;
+	$right: 9999px;
+	$bottom: 9999px;
+	$left: -9999px;
+
+	@each $side in $sides {
+		@if $side == top {
+			$top: 0;
+		} @else if $side == right {
+			$right: 0;
+		} @else if $side == bottom {
+			$bottom: 0;
+		} @else if $side == left {
+			$left: 0;
+		}
+	}
+
+	clip: rect($top, $right, $bottom, $left);
+}

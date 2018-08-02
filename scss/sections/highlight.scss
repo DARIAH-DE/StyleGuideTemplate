@@ -1,0 +1,43 @@
+.highlight {
+	background: $light-grey url(grain.png);
+	color: shade($text-color, 50);
+	margin: 0 (-$grid);
+	padding: ($grid / 2);
+	text-shadow: $outset-shadow;
+
+	@media #{$large} {
+		padding: ($grid / 4) ($grid * .75);
+	}
+
+	@media #{$medium} {
+		margin: 0 (-$grid / 2) 0;
+		padding: ($grid / 4);
+	}
+
+
+	p {
+		@include typo-scale(1);
+		clear: both;
+		line-height: ($grid * 4 / 3);
+		text-align: left;
+		margin: 0 auto;
+		max-width: $max-width;
+		width: 100%;
+		padding: ($grid / 4) 0;
+		position: relative;
+
+		@media #{$large} {
+			font-size: $font-size;
+			line-height: $line-height;
+			max-width: ($grid * 42.33333);
+		}
+
+		@media (max-width: $grid * 44.5) {
+			padding: ($grid / 4);
+		}
+
+		@media #{$medium} {
+			max-width: $content-width + ($grid / 2);
+		}
+	}
+}

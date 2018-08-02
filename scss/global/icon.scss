@@ -1,0 +1,9 @@
+.icon {
+	@include transition(transform);
+	display: inline-block;
+	fill: currentColor;
+	height: 17px;
+	position: relative;
+	vertical-align: middle;
+	width: 17px;
+}

@@ -249,9 +249,8 @@
 		</h1>
 
 		<main class="main">
-
-			<!--<div class="highlight">
-				 <div class="tiles">
+			<div class="highlight">
+				<div class="tiles">
 					<a class="tile" href="#">
 						<svg class="icon">
 							<use xlink:href="#icon-book"></use>
@@ -288,17 +287,17 @@
 						</svg>
 						Partner&shy;projekte
 					</a>
-				</div> -->
+				</div>
 
-				<!-- <div class="main_content">
+				<div class="main_content">
 					<p>
 						DARIAH-DE unterstützt die mit digitalen Ressourcen und Methoden arbeitenden Geistes- und Kultur­­wissen­­schaftler­­Innen
 						in Forschung und Lehre. Als Teil einer europaweiten Initiative bauen wir dazu eine digitale Forschungs­­infra­struktur
 						für Werkzeuge und Forschungs­daten auf und entwickeln Materialien für Lehre und Weiter­bildung im Bereich der Digital
 						Humanities.
 					</p>
-				</div> -->
-				<div class="main_content">
+				</div>
+				<div id="contentInner">
 					<h2>Summary:</h2>
 					<ul>
 						<li><a href="#purpose">Purpose</a></li>
@@ -310,62 +309,23 @@
 					<h2 id="purpose">Purpose</h2>
 					<p>The purpose of the DARIAH-DE <strong>StyleGuideTemplate</strong> (<strong>SGT</strong> from now on) is to provide a basic template for all web applications that are part of the DARIAH-DE ecosystem.
 					</p>
-					<div class="center highlight">
+					<div class="alert alert-info">
+						<button type="button" class="close" data-dismiss="alert">&times;</button>
 						<strong>Tip:</strong> If you are about to start developing a new DARIAH-DE application, by following the SGT the look &amp; feel of your app is going to be consistent with the rest of the applications.
 					</div>
-					<div class="center highlight">
+					<div class="alert alert-info">
+						<button type="button" class="close" data-dismiss="alert">&times;</button>
 						<strong>Tip:</strong> If you have already developed a DARIAH-DE application, you may want to adjust its layout so as to match the one described by the SGT.
 					</div>
 					<h3>Dependencies</h3>
-						<p>
-							The design of the SGT uses SCSS which is compiled using the definitions in the gulpfile.
-							If you want to change aspects of the design, you have to proceed as follows.
-						</p>
-						<p>
-							Note, that Themify icons are defined as SVG symbols at the end of this html file.
-							To extend with additional files, checkout the corresponding website, e.g. the svg-definition of
-							the <a href="https://raw.githubusercontent.com/lykmapipo/themify-icons/master/SVG/alert.svg">
-						  alert</a>.
-						</p>
-					<h4>Setup</h4>
-						<p>
-							If not already availaible, install <a href="https://nodejs.org/">node.js</a>,
-							which comes with npm. Then, install all dependencies with npm i --dev.
-						</p>
-					  <p>
-							You also need to install gulp globally with npm i -g gulp.
-						</p>
-
-					<h4>Compile and watch</h4>
-						<p>
-							Compile SCSS to CSS by running gulp styles.
-
-							Compile JavaScript with gulp scripts.
-
-							Run gulp compile to execute the tasks above.
-						</p>
-						<p>
-							The default task, executed with just gulp, runs the compile task and watches for changes.
-						</p>
-
-					<h4>License</h4>
-						<p>
-							This design is licensed under the AGPL 3.0, with the following exceptions:
-
-    					The included Museo Sans Rounded font is under a proprietary license and must not be used by other projects without an appropriate license.
-
-    					The included Roboto font is under the Apache 2.0 license.
-
-    					The included Themify icons are under the SIL Open Font License, their code under the MIT license. Included brand icons are copyright/trademarks of their respective owners.
-						</p>
-					<!-- <p>This template relies on the following external resources:
+					<p>This template relies on the following external resources:
 						<ul>
 							<li><a href="http://bootstrapdocs.com/v2.2.2/docs/">Boostrap Framework (v. 2.2)</a></li>
 							<li><a href="http://www.jquery.com/">jQuery</a> Library (v. 1.8.2)</li>
 							<li><a href="http://fortawesome.github.io/Font-Awesome/icons/">Font Awesome icons (v. 4.3.0)</a>, e.g. <i class="fa fa-exclamation-circle"></i> <i class="fa fa-globe"></i> <i class="fa fa-user"></i> etc. </li>
 							<li><a href="www.famfamfam.com/lab/icons/flags/">FamFamFam flag icons</a>, e.g. <img src="resources/img/famfamfam_flag_icons/png/de.png" alt="German"/> <img src="resources/img/famfamfam_flag_icons/png/gb.png" alt="English"/> <img src="resources/img/famfamfam_flag_icons/png/fr.png" alt="French"/> etc.</li>
 						</ul>
-					</p> -->
+					</p>
 					<hr />
 					<h2 id="howto">How to use this template?</h2>
 					<p>Clone the <a href="https://github.com/DARIAH-DE/StyleGuideTemplate">github repository</a> and start adapting the template to your own application (e.g. integration with the <a href="https://en.wikipedia.org/wiki/Comparison_of_web_template_engines">template engine</a> of your choice).</p>
@@ -375,13 +335,15 @@
 							<li>the <strong>tool name</strong></li>
 							<li>the <strong>"breadcrumbs"</strong> section</li>
 							<li>the list of <strong>supported languages</strong>
-								<div class="center highlight">
+								<div class="alert alert-info">
+									<button type="button" class="close" data-dismiss="alert">&times;</button>
 									<strong>Tip:</strong> To find the language list look for this element in the HTML source code:
 									<pre>&lt;ul id="language_selection"&gt;...&lt;/ul&gt;</pre>
 								</div>
 							</li>
 							<li>the <strong>licence</strong> information
-							<div class="center highlight">
+							<div class="alert alert-info">
+								<button type="button" class="close" data-dismiss="alert">&times;</button>
 								<strong>Tip:</strong> Look for this element in the HTML source code:
 								<pre>&lt;div id="footer"&gt;...&lt;/div&gt;</pre>
 							</div>
@@ -389,54 +351,36 @@
 						</ul>
 					</p>
 					<h3>What not to change</h3>
-					<p>
-						<svg class="icon">
-							<use xlink:href="#icon-info-alt"></use>
-						</svg>
-						The DARIAH-DE Global Menu must remain unchanged (i.e. the dropdown menu in the top-left corner which is re-populated from a global JSON definition).
-					</p>
+					<p><i class="fa fa-exclamation-circle"></i>The DARIAH-DE Global Menu must remain unchanged (i.e. the dropdown menu in the top-left corner which is re-populated from a global JSON definition).</p>
 					<hr />
 					<h2 id="sgt_content">Content</h2>
 					<h3>Templates</h3>
 					<p>The <tt>/templates/</tt> directory contains the following template variants:</p>
 					<ul>
-						<li><tt><a href="front-page.html">front-page.html</a></tt>: A template for the front page in German.</li>
-						<li><tt><a href="front-page-en.html">front-page-en.html</a></tt>
-							: A template for the front page in English.
-						</li>
-						<li><tt><a href="html-elements">html-elements.html</a></tt>: A list of possible HTML elements.</li>
-						<li><tt><a href="login.html">login.html</a></tt>: A template for a login page.</li>
-						<li><tt><a href="news-post.html">news-post.html</a></tt>: A new post template.</li>
-						<li><tt><a href="select-organisation.html">select-organisation.html</a></tt>
-							: A template for the organisation selection.
-						</li>
-						<li><tt><a href="status.html">status.html</a></tt>: A template for the status page of the app. </li>
-						<!--
-						<li><tt><a href=""> </a></tt>: </li>
-						<li><tt><a href=""> </a></tt>: </li>
-						<li><tt><a href=""> </a></tt>: </li>
 						<li><tt><a href="notloggedin.html">/templates/notloggedin.html</a></tt>
 							: this template assumes that the user <strong>is not</strong> logged in as indicated by the <i class="icon-signin icon-white"></i> icon displayed in the top-right corner</li>
 						<li><tt><a href="loggedin.html">/templates/loggedin.html</a></tt>
 							: this template assumes that the user <strong>is</strong> logged in as indicated by the <i class="fa-user icon-white"></i> icon displayed in the top-right corner</li>
 						<li><tt><a href="withlogo.html">/templates/withlogo.html</a></tt>
 							: this is an alternate template that displays the DARIAH-DE logo within the dropdown menu in the top-left corner</li>
-						-->
 					</ul>
 					<h3>Resources</h3>
-					<p>The <tt>/assets/</tt> and <tt>/content</tt> directories contain all the files required by the SGT in order to display correctly. </p>
-					<p>The assets directory contains fonts, logos, the favicon, scripts and styles, whereas the content directory contains images.
+					<p>The <tt>/resources/</tt> directory contains all the files required by the SGT in order to display correctly. </p>
+					<p>This directory has the following straight-forward structure:
+						<ul>
+							<li><tt>/resources/css/</tt></li>
+							<li><tt>/resources/fonts/</tt></li>
+							<li><tt>/resources/img/</tt></li>
+							<li><tt>/resources/js/</tt></li>
+						</ul>
 					</p>
-					<div class="center highlight">
-						<svg class="icon">
-							<use xlink:href="#icon-info-alt"></use>
-						</svg>
-						If you move the <tt>assets</tt> or <tt>content/</tt> directory make sure you change the path of links pointing to its content (e.g. js, css, icons, etc.).
+					<div class="alert alert-block">
+						<button type="button" class="close" data-dismiss="alert">&times;</button>
+						<i class="fa fa-exclamation-circle"></i>If you move the <tt>resources</tt> directory make sure you change the path of links pointing to its content (e.g. js, css, icons, etc.).
 					</div>
 					<hr />
 					<h2 id="sgt_contact">Contact</h2>
-					<p>This template was refined by <a href="https://github.com/maltevogl"> Malte Vogl </a> u.a., based on a desgin by <a href="https://github.com/tschaef">Tobias Schäfer</a>. </p>
-					<p>Former versions of this template were packaged together by <a href="https://github.com/mromanello">Matteo Romanello</a> and based on the layout design by <a href="https://github.com/patrickheck">Patrick Heck</a>.</p>
+					<p>This template was packaged together by <a href="https://github.com/mromanello">Matteo Romanello</a> and is based on the layout design by <a href="https://github.com/patrickheck">Patrick Heck</a>.</p>
 					<p>For bugs, feature requests etc. please use the <a href="https://github.com/DARIAH-DE/StyleGuideTemplate/issues">github issue tracker</a>.</p>
 
 
@@ -642,9 +586,6 @@
 		</symbol>
 		<symbol id="icon-link" viewBox="0 0 17 17">
 			<path d="M12.983 6.94l-.938.938-.707-.707.938-.938c.975-.975.975-2.561 0-3.535s-2.561-.975-3.535 0L5.754 5.686c-.975.975-.975 2.561 0 3.535s2.561.975 3.535 0l.707.707c-.683.683-1.578 1.023-2.475 1.023s-1.792-.341-2.474-1.023a3.504 3.504 0 0 1 0-4.949l2.987-2.987a3.502 3.502 0 0 1 4.949 0 3.501 3.501 0 0 1 0 4.948zM6.042 8.034l-.13.129.705.709.131-.13c.975-.975 2.561-.975 3.535 0s.975 2.561 0 3.535L7.26 15.302c-.975.975-2.561.975-3.535 0s-.975-2.561 0-3.535l1.058-1.059-.707-.707-1.058 1.059a3.504 3.504 0 0 0 0 4.949c.683.683 1.578 1.023 2.475 1.023s1.792-.341 2.475-1.023l3.023-3.024a3.504 3.504 0 0 0 0-4.949 3.503 3.503 0 0 0-4.949-.002z" />
-		</symbol>
-		<symbol id="icon-info-alt" viewBox="0 0 17 17">
-			<path d="M8.5 0c-4.687 0-8.5 3.813-8.5 8.5s3.813 8.5 8.5 8.5 8.5-3.813 8.5-8.5-3.813-8.5-8.5-8.5zM8.5 16c-4.136 0-7.5-3.364-7.5-7.5s3.364-7.5 7.5-7.5 7.5 3.364 7.5 7.5-3.364 7.5-7.5 7.5zM9 12.369h0.979v1h-2.958v-1h0.979v-4.42h-0.946v-1h1.946v5.42zM7.185 4.986c0-0.545 0.441-0.986 0.986-0.986s0.985 0.441 0.985 0.986c0 0.543-0.44 0.984-0.985 0.984s-0.986-0.441-0.986-0.984z" />
 		</symbol>
 	</svg>
 </body>

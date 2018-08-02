@@ -1,0 +1,101 @@
+.logo {
+	font-size: ($grid * 2); // TODO: Why does this help removing the bottom gap?
+	margin: 0 auto !important;
+	text-align: center;
+
+	a {
+		border: 0;
+	}
+}
+
+
+.logo_link {
+	display: inline-block;
+	margin: 0 auto;
+	padding: 0 $grid;
+	position: relative;
+	z-index: 1;
+
+	&.-aai {
+		height: ($grid * 3);
+		padding: 0;
+	}
+
+	&.-small {
+		height: ($grid * 2);
+
+		// Paint over logo tagline
+		&::after {
+			background: #fff;
+			bottom: -17px;
+			content: '';
+			display: block;
+			width: 100%;
+			height: 20px;
+			position: absolute;
+		}
+	}
+}
+
+// 1. Center logo visually
+.logo_logo {
+	display: block;
+	pointer-events: none; // Allow click-trough on spike
+	position: relative;
+
+	&.-aai {
+		max-height: ($grid * 3);
+		margin-top: (-$grid / 2);
+		max-width: 100%;
+	}
+
+	&.-large {
+		height: ($grid * 6);
+		left: -23px; // 1
+		margin: -9px 0 0;
+		width: 303px; // IE 11
+
+		@media #{$small} {
+			height: ($grid * 4.5);
+			left: -17px;
+			margin: (-$grid / 4) 0 (-$grid / 2);
+			width: 227px; // IE 11
+		}
+	}
+
+	&.-small {
+		height: ($grid * 3);
+		left: -10px; // 1
+		margin: -6px 0 0;
+		width: 151px; // IE 11
+	}
+
+	&.-spike {
+		fill: #fff;
+		margin: 0 $grid;
+		position: absolute;
+		stroke: #fff;
+		z-index: -1;
+
+		&.-aai {
+			margin: 0;
+			stroke-width: 12px;
+			top: -13px;
+		}
+
+		&.-large {
+			stroke-width: 12px;
+			top: -17px; // Match stroke width
+
+			@media #{$small} {
+				stroke-width: 18px;
+				top: -11px;
+			}
+		}
+
+		&.-small {
+			stroke-width: 18px;
+			top: -9px; // Match stroke width
+		}
+	}
+}

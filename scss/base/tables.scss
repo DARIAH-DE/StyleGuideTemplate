@@ -1,0 +1,23 @@
+table {
+	width: 100%;
+}
+
+caption {
+	@include heading(4);
+	margin-top: 0;
+	text-align: left;
+}
+
+tr {
+	border-bottom: $border-width solid $border-color;
+}
+
+th,
+td {
+	padding: ($grid / 4) .5em ($grid / 4 - $border-width);
+	text-align: left;
+}
+
+th {
+	color: $text-color-light;
+}

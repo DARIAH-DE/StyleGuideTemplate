@@ -1,0 +1,35 @@
+.header {
+	@include clearfix;
+	background: $primary-color;
+	padding: 0 ($grid / 2);
+	position: relative;
+
+	@media #{$large} {
+		padding: 0;
+	}
+
+	&.-nav-open {
+		z-index: 9; // Hide logo "spike"
+
+		@media #{$large} {
+			z-index: 0;
+		}
+	}
+}
+
+.header_aside {
+	@include separator;
+	padding: 0 0 0 ($grid / 4);
+	position: absolute;
+	right: ($grid / 2 + 112px); // Make room for DARIAH button
+	top: 0;
+
+	// Adjust separator
+	&::before {
+		left: 0;
+	}
+
+	@media #{$large} {
+		right: ($grid / 2 + $grid * 2);
+	}
+}

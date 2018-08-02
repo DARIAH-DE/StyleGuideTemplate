@@ -1,0 +1,80 @@
+.column {
+	@include clearfix;
+	display: table-cell;
+	padding: 0 ($grid / 3);
+	vertical-align: top;
+
+	@media #{$medium} {
+		display: block;
+		padding: 0;
+
+		& + & {
+			border-top: $border-width solid $border-color;
+			margin-top: $grid;
+			padding-top: ($grid - $border-width);
+		}
+	}
+
+	&.-wide {
+		max-width: none;
+		width: 61.8%;
+
+		@media #{$medium} {
+			width: auto;
+		}
+	}
+
+	&:first-child {
+		padding-left: 0;
+		padding-right: ($grid * 2 / 3);
+
+		@media #{$medium} {
+			padding-right: 0;
+		}
+	}
+
+	&:last-child {
+		padding-left: ($grid * 2 / 3);
+		padding-right: 0;
+
+		@media #{$medium} {
+			padding-left: 0;
+		}
+	}
+
+	img {
+		margin: 0 0 ($grid / 2);
+	}
+
+	// TODO: Replace with layout block?
+	img:first-child {
+		@media #{$medium} {
+			float: left;
+			margin: 0;
+			width: 38.2%;
+
+			& ~ p {
+				float: right;
+				padding-left: $grid;
+				width: 61.8%;
+			}
+		}
+
+		@media #{$tiny} {
+			float: none;
+			max-width: ($grid * 10);
+			width: 100%;
+			margin: 0 auto $grid;
+
+			& ~ p {
+				float: none;
+				padding-left: 0;
+				width: auto;
+			}
+		}
+	}
+
+	> :last-child {
+		margin-bottom: 0;
+	}
+}
