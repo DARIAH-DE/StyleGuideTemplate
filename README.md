@@ -10,13 +10,13 @@ This template complements the report [R. 1.2.2/R. 7.5 *Usability Criteria for Ex
 
 1. `git clone` this repository
 2. `cd` into the `templates` directory
-3. launch a web server from terminal with `python -m SimpleHTTPServer 8000`
+3. launch a web server from terminal with `python -m SimpleHTTPServer 8000` (for python2) or `python3 -m http.server` (for python3)
 4. open `localhost:8000` in a browser
+
+or just check it out at <http://dariah-de.github.io/StyleGuideTemplate/>.
 
 To view the previous styleguide version, `cd` to `templates/StyleGuide_v100` and launch
 the webserver from that directory.
-
-or just check it out at <http://dariah-de.github.io/StyleGuideTemplate/>
 
 ## Desgin Primer
 
@@ -25,7 +25,9 @@ the [Design-Primer](design-primer.de.md)
 
 ## Contact
 
-This template was packaged together by [Matteo Romanello](https://github.com/mromanello) and is based on the layout design by [Patrick Heck](https://github.com/patrickheck).
+This style guide was compiled by [Malte Vogl](https://github.com/maltevogl), Hanna Meiners, Klaus Thoden, ... , based on a design by [Tobias Schäfer](https://github.com/tschaef).
+
+This work is based on the previous template, which was packaged together by [Matteo Romanello](https://github.com/mromanello) and was based on the layout design by [Patrick Heck](https://github.com/patrickheck).
 
 For bugs, feature requests etc. please use the [github issue tracker](https://github.com/DARIAH-DE/StyleGuideTemplate/issues).
 

@@ -8,6 +8,11 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<script src="assets/script.js" defer></script>
+
+<!-- Test for dynamic menu generation
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="assets/globalmenu_test.js"></script>
+-->
 	<title>DARIAH-DE</title>
 </head>
 
@@ -176,7 +181,7 @@
 						</svg>
 					</button>
 
-					<div class="nav_menu -portal">
+					<div id="replace" class="nav_menu -portal">
 						<ul class="nav_list -level-2 -portal">
 							<li class="nav_item -level-2">
 								<a class="nav_link" href="https://de.dariah.eu/">DARIAH-DE</a>
@@ -249,55 +254,6 @@
 		</h1>
 
 		<main class="main">
-
-			<!--<div class="highlight">
-				 <div class="tiles">
-					<a class="tile" href="#">
-						<svg class="icon">
-							<use xlink:href="#icon-book"></use>
-						</svg>
-						Einstieg
-					</a>
-					<a class="tile" href="#">
-						<svg class="icon">
-							<use xlink:href="#icon-comments"></use>
-						</svg>
-						Beratung &amp; Support
-					</a>
-					<a class="tile" href="#">
-						<svg class="icon">
-							<use xlink:href="#icon-agenda"></use>
-						</svg>
-						Forschungs&shy;daten
-					</a>
-					<a class="tile" href="#">
-						<svg class="icon">
-							<use xlink:href="#icon-map-alt"></use>
-						</svg>
-						Geo-Browser
-					</a>
-					<a class="tile" href="#">
-						<svg class="icon">
-							<use xlink:href="#icon-server"></use>
-						</svg>
-						Repository
-					</a>
-					<a class="tile" href="#">
-						<svg class="icon">
-							<use xlink:href="#icon-link"></use>
-						</svg>
-						Partner&shy;projekte
-					</a>
-				</div> -->
-
-				<!-- <div class="main_content">
-					<p>
-						DARIAH-DE unterstützt die mit digitalen Ressourcen und Methoden arbeitenden Geistes- und Kultur­­wissen­­schaftler­­Innen
-						in Forschung und Lehre. Als Teil einer europaweiten Initiative bauen wir dazu eine digitale Forschungs­­infra­struktur
-						für Werkzeuge und Forschungs­daten auf und entwickeln Materialien für Lehre und Weiter­bildung im Bereich der Digital
-						Humanities.
-					</p>
-				</div> -->
 				<div class="main_content">
 					<h2>Summary:</h2>
 					<ul>
@@ -310,23 +266,33 @@
 					<h2 id="purpose">Purpose</h2>
 					<p>The purpose of the DARIAH-DE <strong>StyleGuideTemplate</strong> (<strong>SGT</strong> from now on) is to provide a basic template for all web applications that are part of the DARIAH-DE ecosystem.
 					</p>
-					<div class="center highlight">
+					<div class="highlight">
 						<strong>Tip:</strong> If you are about to start developing a new DARIAH-DE application, by following the SGT the look &amp; feel of your app is going to be consistent with the rest of the applications.
 					</div>
-					<div class="center highlight">
+					<div class="highlight">
 						<strong>Tip:</strong> If you have already developed a DARIAH-DE application, you may want to adjust its layout so as to match the one described by the SGT.
 					</div>
 					<h3>Dependencies</h3>
-						<p>
-							The design of the SGT uses SCSS which is compiled using the definitions in the gulpfile.
-							If you want to change aspects of the design, you have to proceed as follows.
+						<p> This template does use external resources
+							<ul>
+								Fonts
+								<li>Museo Sans Rounded: See <a href="https://www.exljbris.com/museosansrounded.html">here</a></li>
+								<li>Roboto: See <a href="https://fonts.google.com/specimen/Roboto">here</a></li>
+							</ul>
 						</p>
+
 						<p>
 							Note, that Themify icons are defined as SVG symbols at the end of this html file.
 							To extend with additional files, checkout the corresponding website, e.g. the svg-definition of
 							the <a href="https://raw.githubusercontent.com/lykmapipo/themify-icons/master/SVG/alert.svg">
-						  alert</a>.
+							alert</a>.
 						</p>
+
+						<p>
+							The design of the SGT uses SCSS which is compiled using the definitions in the gulpfile.
+							If you want to change aspects of the design, you have to proceed as follows.
+						</p>
+
 					<h4>Setup</h4>
 						<p>
 							If not already availaible, install <a href="https://nodejs.org/">node.js</a>,
@@ -350,22 +316,17 @@
 
 					<h4>License</h4>
 						<p>
-							This design is licensed under the AGPL 3.0, with the following exceptions:
-
+							This design is licensed under the AGPL 3.0, by <a href="https://github.com/tschaef"> Torsten Schäfer</a> with the following exceptions:
+						</p>
+						<p>
     					The included Museo Sans Rounded font is under a proprietary license and must not be used by other projects without an appropriate license.
-
+						</p>
+						<p>
     					The included Roboto font is under the Apache 2.0 license.
-
+						</p>
+						<p>
     					The included Themify icons are under the SIL Open Font License, their code under the MIT license. Included brand icons are copyright/trademarks of their respective owners.
 						</p>
-					<!-- <p>This template relies on the following external resources:
-						<ul>
-							<li><a href="http://bootstrapdocs.com/v2.2.2/docs/">Boostrap Framework (v. 2.2)</a></li>
-							<li><a href="http://www.jquery.com/">jQuery</a> Library (v. 1.8.2)</li>
-							<li><a href="http://fortawesome.github.io/Font-Awesome/icons/">Font Awesome icons (v. 4.3.0)</a>, e.g. <i class="fa fa-exclamation-circle"></i> <i class="fa fa-globe"></i> <i class="fa fa-user"></i> etc. </li>
-							<li><a href="www.famfamfam.com/lab/icons/flags/">FamFamFam flag icons</a>, e.g. <img src="resources/img/famfamfam_flag_icons/png/de.png" alt="German"/> <img src="resources/img/famfamfam_flag_icons/png/gb.png" alt="English"/> <img src="resources/img/famfamfam_flag_icons/png/fr.png" alt="French"/> etc.</li>
-						</ul>
-					</p> -->
 					<hr />
 					<h2 id="howto">How to use this template?</h2>
 					<p>Clone the <a href="https://github.com/DARIAH-DE/StyleGuideTemplate">github repository</a> and start adapting the template to your own application (e.g. integration with the <a href="https://en.wikipedia.org/wiki/Comparison_of_web_template_engines">template engine</a> of your choice).</p>
@@ -388,7 +349,7 @@
 							</li>
 						</ul>
 					</p>
-					<h3>What not to change</h3>
+					<h3>What not to change ( WORK IN PROGRESS )</h3>
 					<p>
 						<svg class="icon">
 							<use xlink:href="#icon-info-alt"></use>
@@ -404,28 +365,18 @@
 						<li><tt><a href="front-page-en.html">front-page-en.html</a></tt>
 							: A template for the front page in English.
 						</li>
-						<li><tt><a href="html-elements">html-elements.html</a></tt>: A list of possible HTML elements.</li>
+						<li><tt><a href="html-elements.html">html-elements.html</a></tt>: A list of possible HTML elements.</li>
 						<li><tt><a href="login.html">login.html</a></tt>: A template for a login page.</li>
 						<li><tt><a href="news-post.html">news-post.html</a></tt>: A new post template.</li>
 						<li><tt><a href="select-organisation.html">select-organisation.html</a></tt>
 							: A template for the organisation selection.
 						</li>
 						<li><tt><a href="status.html">status.html</a></tt>: A template for the status page of the app. </li>
-						<!--
-						<li><tt><a href=""> </a></tt>: </li>
-						<li><tt><a href=""> </a></tt>: </li>
-						<li><tt><a href=""> </a></tt>: </li>
-						<li><tt><a href="notloggedin.html">/templates/notloggedin.html</a></tt>
-							: this template assumes that the user <strong>is not</strong> logged in as indicated by the <i class="icon-signin icon-white"></i> icon displayed in the top-right corner</li>
-						<li><tt><a href="loggedin.html">/templates/loggedin.html</a></tt>
-							: this template assumes that the user <strong>is</strong> logged in as indicated by the <i class="fa-user icon-white"></i> icon displayed in the top-right corner</li>
-						<li><tt><a href="withlogo.html">/templates/withlogo.html</a></tt>
-							: this is an alternate template that displays the DARIAH-DE logo within the dropdown menu in the top-left corner</li>
-						-->
+						<li><tt><a href="full-width.html">full-width.html</a></tt>: A template using the full-width of the browser window.</li>
 					</ul>
 					<h3>Resources</h3>
-					<p>The <tt>/assets/</tt> and <tt>/content</tt> directories contain all the files required by the SGT in order to display correctly. </p>
-					<p>The assets directory contains fonts, logos, the favicon, scripts and styles, whereas the content directory contains images.
+					<p>The <tt>assets</tt> and <tt>content</tt> directories contain all the files required by the SGT in order to display correctly. </p>
+					<p>The <tt>assets</tt> directory contains fonts, logos, the favicon, scripts and styles, whereas the <tt>content</tt> directory contains images.
 					</p>
 					<div class="center highlight">
 						<svg class="icon">
@@ -435,7 +386,7 @@
 					</div>
 					<hr />
 					<h2 id="sgt_contact">Contact</h2>
-					<p>This template was refined by <a href="https://github.com/maltevogl"> Malte Vogl </a> u.a., based on a desgin by <a href="https://github.com/tschaef">Tobias Schäfer</a>. </p>
+					<p>This template was refined by <a href="https://github.com/maltevogl"> Malte Vogl </a>, Hanna Meiners, Klaus Thoden, ... , based on a design by <a href="https://github.com/tschaef">Tobias Schäfer</a>. </p>
 					<p>Former versions of this template were packaged together by <a href="https://github.com/mromanello">Matteo Romanello</a> and based on the layout design by <a href="https://github.com/patrickheck">Patrick Heck</a>.</p>
 					<p>For bugs, feature requests etc. please use the <a href="https://github.com/DARIAH-DE/StyleGuideTemplate/issues">github issue tracker</a>.</p>
 
