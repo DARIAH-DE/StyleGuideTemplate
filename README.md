@@ -1,6 +1,6 @@
 # DARIAH-DE Style Guide Template
 
-![template screenshot](./screenshot_1.png)
+![template screenshot](./screenshot_v2.png)
 
 The goal of this template is to facilitate the development of interfaces for web tools that are part of the DARIAH-DE ecosystem.
 
@@ -33,8 +33,10 @@ For bugs, feature requests etc. please use the [github issue tracker](https://gi
 
 ## Global Menu
 
+WORK IN PROGRESS
+
 To ensure the global navigation menu remains consistent accross all services, make sure to use a minimal `ul` with `id="home_dropdown_menu"` as in the template and to include
 ```html
-<script type="text/javascript" src="resources/js/globalmenu.js"></script>
+<script type="text/javascript" src="assets/globalmenu.js"></script>
 ```
 which will load the central version.
