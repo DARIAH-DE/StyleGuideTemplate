@@ -4,7 +4,7 @@
 
 The goal of this template is to facilitate the development of interfaces for web tools that are part of the DARIAH-DE ecosystem.
 
-This template complements the report [R. 1.2.2/R. 7.5 *Usability Criteria for External Requests of Collaboration*](https://wiki.de.dariah.eu/download/attachments/14651583/R1.2.2-7.5_final.pdf?version=1&modificationDate=1452850842838&api=v2), specifically the *DARIAH-DE Style Guide* contained in the Appendix.
+This template is based on the report [R. 1.2.2/R. 7.5 *Usability Criteria for External Requests of Collaboration*](https://wiki.de.dariah.eu/download/attachments/14651583/R1.2.2-7.5_final.pdf?version=1&modificationDate=1452850842838&api=v2), specifically the *DARIAH-DE Style Guide* contained in the Appendix.
 
 ## How to view this template?
 
@@ -15,13 +15,13 @@ This template complements the report [R. 1.2.2/R. 7.5 *Usability Criteria for Ex
 
 or just check it out at <http://dariah-de.github.io/StyleGuideTemplate/>.
 
-To view the previous styleguide version, `cd` to `templates/StyleGuide_v100` and launch
-the webserver from that directory.
+To view the previous style guide version, `cd` to `templates/StyleGuide_v100` and launch
+the web server from that directory.
 
-## Desgin Primer
+## Design Primer
 
 For tips and guidelines on the extension of this template, have a look at
-the [Design-Primer](design-primer.de.md)
+the [Design-Primer](design-primer.de.md) (currently only in German)
 
 ## Contact
 

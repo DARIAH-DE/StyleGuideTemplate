@@ -8,12 +8,7 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<script src="assets/script.js" defer></script>
-
-<!-- Test for dynamic menu generation
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
-	<script type="text/javascript" src="assets/globalmenu_test.js"></script>
--->
-	<title>DARIAH-DE :: Style Guide Template</title>
+	<title>DARIAH TOOL</title>
 </head>
 
 <body class="site">
@@ -31,7 +26,7 @@
 					<div class="nav_menu -main">
 						<ul class="nav_list -level-1">
 							<li class="nav_item -level-1 -home">
-								<a class="nav_link" href="index.php" title="Home">
+								<a class="nav_link" href="index.html" title="Home">
 									<svg class="icon">
 										<use xlink:href="#icon-home"></use>
 									</svg>
@@ -39,10 +34,10 @@
 								</a>
 							</li>
 							<li class="nav_item -level-1">
-								<a class="nav_link" href="index.php/aktuelles/">Aktuelles</a>
+								<a class="nav_link" href="index.html">Aktuelles</a>
 							</li>
 							<li class="nav_item -level-1 -has-children">
-								<a class="nav_link" href="javascript:">Digital Humanities
+								<a class="nav_link" href="javascript:">Dokumentation
 									<svg class="icon">
 										<use xlink:href="#icon-angle-down"></use>
 									</svg>
@@ -79,32 +74,11 @@
 											</li>
 										</ul>
 									</li>
-									<li class="nav_item -level-2">
-										<a href="" class="nav_link">
-											<img src="content/images/newspaper.png" alt="">
-											Working Papers
-										</a>
-									</li>
 								</ul>
 							</li>
+
 							<li class="nav_item -level-1">
-								<a class="nav_link" href="index.php/daten/">
-									Daten
-									<svg class="icon">
-										<use xlink:href="#icon-angle-down"></use>
-									</svg>
-								</a>
-							</li>
-							<li class="nav_item -level-1">
-								<a class="nav_link" href="index.php/dienste/">
-									Dienste
-									<svg class="icon">
-										<use xlink:href="#icon-angle-down"></use>
-									</svg>
-								</a>
-							</li>
-							<li class="nav_item -level-1">
-								<a class="nav_link" href="index.php/wir-ueber-uns/">
+								<a class="nav_link" href="index.html">
 									Wir über uns
 									<svg class="icon">
 										<use xlink:href="#icon-angle-down"></use>
@@ -112,7 +86,7 @@
 								</a>
 							</li>
 							<li class="nav_item -level-1">
-								<a class="nav_link" href="index.php/mitmachen/">
+								<a class="nav_link" href="index.html">
 									Mitmachen
 									<svg class="icon">
 										<use xlink:href="#icon-angle-down"></use>
@@ -151,7 +125,7 @@
 						</a>
 					</div>
 
-					<div class="search">
+					<div class="search hidden">
 						<a class="search_toggle" href="javascript:" title="Suchen">
 							<svg class="icon">
 								<use xlink:href="#icon-search"></use>
@@ -181,7 +155,7 @@
 						</svg>
 					</button>
 
-					<div id="replace" class="nav_menu -portal">
+					<div class="nav_menu -portal">
 						<ul class="nav_list -level-2 -portal">
 							<li class="nav_item -level-2">
 								<a class="nav_link" href="https://de.dariah.eu/">DARIAH-DE</a>
@@ -245,249 +219,55 @@
 		</header>
 
 		<h1 class="logo">
-			<a class="logo_link -large" href="" title="Startseite">
-				<img class="logo_logo -large" src="assets/logos/dariah-de-logo-de.svg" alt="DARIAH-DE">
-				<svg class="logo_logo -spike -large" xmlns="http://www.w3.org/2000/svg" width="518.74" height="246.549" viewBox="0 -12 518.74 246.549">
-					<path d="M52.865 25.768c0-10.093 12.995-16.333 21.549-21.516 6.721 4.093 22.397 11.499 22.4 22.119.004 11.79-4.904 31.006-8.806 31.09-4.246.093-10.111-24.356-13.232-24.292-3.12.066-8.929 24.391-12.845 24.385-4.25-.006-9.066-20.801-9.066-31.786" />
+			<a class="logo_link" href="front-page-app.html" title="Startseite">
+				<svg class="logo_logo -small">
+					<use xlink:href="#icon-world"></use>
 				</svg>
 			</a>
 		</h1>
 
 		<main class="main">
-				<div class="main_content">
-					<h2>Summary:</h2>
-					<ul>
-						<li><a href="#purpose">Purpose</a></li>
-						<li><a href="#howto">How to use this template?</a></li>
-						<li><a href="#sgt_content">Included examples and content</a></li>
-						<li><a href="#css_setup">Changing CSS design aspects</a></li>
-						<li><a href="#sgt_contact">Contact</a></li>
-					</ul>
-					<hr />
-					<h2 id="purpose">Purpose</h2>
-					<p>The purpose of the DARIAH-DE <strong>StyleGuideTemplate</strong> (<strong>SGT</strong> from now on) is to provide a basic template for all web applications that are part of the DARIAH-DE ecosystem.
-					</p>
-					<p class="highlight center">
-						<strong>Tip:</strong> If you are about to start developing a new DARIAH-DE application, by following the SGT the look &amp; feel of your app is going to be consistent with the rest of the applications.
-					</p>
-					<p class="highlight center">
-						<strong>Tip:</strong> If you have already developed a DARIAH-DE application, you may want to adjust its layout so as to match the one described by the SGT.
-					</p>
-					<h3>Dependencies</h3>
-						<p> This template does use external resources
-							<ul>
-								Fonts
-								<li>Museo Sans Rounded: See <a href="https://www.exljbris.com/museosansrounded.html">here</a></li>
-								<li>Roboto: See <a href="https://fonts.google.com/specimen/Roboto">here</a></li>
-							</ul>
-						</p>
-
-						<p>
-							Note, that Themify icons are defined as SVG symbols at the end of this html file.
-							To extend with additional files, check the corresponding website, e.g. the SVG definition of
-							the <a href="https://raw.githubusercontent.com/lykmapipo/themify-icons/master/SVG/alert.svg">
-							alert</a>.
-						</p>
-
-						<p>
-							The design of the SGT uses SCSS which is compiled using the definitions in the gulpfile.
-							If you want to change aspects of the design, have a look at <a href="#css_setup">this section</a>.
-						</p>
-
-					<hr />
-					<h2 id="howto">How to use this template?</h2>
-					<p>Clone the <a href="https://github.com/DARIAH-DE/StyleGuideTemplate">github repository</a> and start adapting the template to your own application (e.g. integration with the <a href="https://en.wikipedia.org/wiki/Comparison_of_web_template_engines">template engine</a> of your choice).</p>
-
-					<h3>Where to start</h3>
-						<p>
-							The design and its elements are explained in German in the <tt>design-primer.de.md</tt> file in the root directory of the repository.
-						</p>
-						<p>
-							A good starting point is the collection of possible <tt><a href="html-elements.html">HTML elements</a></tt>. Using tools like the Web Inspector in Firefox or Chrome
-							quickly shows how to use class attributes for changing the page behaviour.
-
-							<h4>Common exampels</h4>
-							<ul>
-								<li> To display the website without the navigation bar, one adds the attribute
-									<br/>
-									<code>&lt;body class="site -no-header"&gt;</code>.
-								</li>
-							<li> To hide specific elements from the nagivation bar, one adds the hidden class, e.g. to hide the search item
-								<br/>
-								<code>&lt;div class="search hidden"&gt;</code>.
-							</li>
-							<li>
-								<tt><a href="front-page-app.html">front-page-app.html</a></tt> shows an example starting page for a DARIAH tool.
-							</li>
-							</ul>
-						</p>
-					<h3>What to change</h3>
-					<p>
-						<ul>
-							<li>the <strong>tool name</strong> (search for the &lt;title&gt; element)</li>
-							<li>
-								the list of <strong>supported languages</strong> (search for <code>&lt;div class="language"&gt;...&lt;/div&gt;</code>
-								in the HTML code)
-							</li>
-							<li>
-								the <strong>licence</strong> information (search for <code>&lt;div id="footer"&gt;...&lt;/div&gt;</code> in the HTML code)
-							</li>
-						</ul>
-					</p>
-					<h3>What not to change ( WORK IN PROGRESS )</h3>
-					<p>
+			<div class="highlight wrap">
+				<div class="tiles wrap">
+					<a class="tile" href="#">
 						<svg class="icon">
-							<use xlink:href="#icon-info-alt"></use>
+							<use xlink:href="#icon-book"></use>
 						</svg>
-						The DARIAH-DE Global Menu must remain unchanged (i.e. the dropdown menu in the top-left corner which is re-populated from a global JSON definition).
-					</p>
-					<hr />
-					<h2 id="sgt_content">Included examples and content</h2>
-					<h3>Templates</h3>
-					<p>The <tt>/templates/</tt> directory contains the following template variants:</p>
-					<ul>
-						<li><tt><a href="front-page.html">front-page.html</a></tt>: A template for the front page in German.</li>
-						<li><tt><a href="front-page-en.html">front-page-en.html</a></tt>
-							: A template for the front page in English.
-						</li>
-						<li><tt><a href="front-page-app.html">front-page-app.html</a></tt>: A template for a DARIAH app front page in German.</li>
-						<li><tt><a href="html-elements.html">html-elements.html</a></tt>: A list of possible HTML elements.</li>
-						<li><tt><a href="login.html">login.html</a></tt>: A template for a login page.</li>
-						<li><tt><a href="news-post.html">news-post.html</a></tt>: A new post template.</li>
-						<li><tt><a href="select-organisation.html">select-organisation.html</a></tt>
-							: A template for the organisation selection.
-						</li>
-						<li><tt><a href="status.html">status.html</a></tt>: A template for the status page of the app. </li>
-						<li><tt><a href="full-width.html">full-width.html</a></tt>: A template using the full-width of the browser window.</li>
-					</ul>
-					<h3>Resources</h3>
-					<p>The <tt>assets</tt> and <tt>content</tt> directories contain all the files required by the SGT in order to display correctly. </p>
-					<p>The <tt>assets</tt> directory contains fonts, logos, the favicon, scripts and styles, whereas the <tt>content</tt> directory contains images.
-					</p>
-					<p class="center highlight">
+						Einstieg
+					</a>
+					<a class="tile" href="#">
 						<svg class="icon">
-							<use xlink:href="#icon-info-alt"></use>
+							<use xlink:href="#icon-comments"></use>
 						</svg>
-						If you move the <tt>assets</tt> or <tt>content</tt> directory make sure you change the path of links pointing to its content (e.g. js, css, icons, etc.).
+						Beispiele &amp; Support
+					</a>
+					<a class="tile" href="#">
+						<svg class="icon">
+							<use xlink:href="#icon-server"></use>
+						</svg>
+						Daten
+					</a>
+					<a class="tile" href="#">
+						<svg class="icon">
+							<use xlink:href="#icon-link"></use>
+						</svg>
+						Partner&shy;projekte
+					</a>
+				</div>
+
+				<div class="center main_content">
+					<p>
+						DARIAH TOOL unterstützt die Arbeit mit als digitalen Ressourcen verfügbaren Texten.
 					</p>
-					<hr />
-					<h2 id="css_setup">Changing CSS design aspects</h2>
-						<p>
-							The design aesthetics can be found in the <tt>design-primer.de.md</tt> file in the root directory of the repository (currently only in German).
-						<p>
-							If not already availaible, install <a href="https://nodejs.org/">node.js</a>,
-							which comes with npm. Then, install all dependencies with npm i --dev from the root of the cloned repository.
-						</p>
-						<p>
-							You may also need to install gulp globally with npm i -g gulp.
-						</p>
-						<p>
-							The design is based on the definitions in the <tt>/scss</tt> and <tt>/js</tt> folders.
-							The destination folders for compilation can be changed in the <tt>gulpfile.js</tt> file.
-						</p>
-
-					<h4>Compile and watch</h4>
-						<p>
-							Compile SCSS to CSS by running gulp styles.
-
-							Compile JavaScript with gulp scripts.
-
-							Run gulp compile to execute the tasks above.
-						</p>
-						<p>
-							The default task, executed with just gulp, runs the compile task and watches for changes.
-						</p>
-
-					<h4>License</h4>
-						<p>
-							This design is licensed under the AGPL 3.0, by <a href="https://github.com/tschaef"> Torsten Schäfer</a> with the following exceptions:
-						</p>
-						<p>
-							The included Museo Sans Rounded font is under a proprietary license and must not be used by other projects without an appropriate license.
-						</p>
-						<p>
-							The included Roboto font is under the Apache 2.0 license.
-						</p>
-						<p>
-							The included Themify icons are under the SIL Open Font License, their code under the MIT license. Included brand icons are copyright/trademarks of their respective owners.
-						</p>
-					<hr />
-					<h2 id="sgt_contact">Contact</h2>
-					<p>This template was refined by <a href="https://github.com/maltevogl"> Malte Vogl </a>, Hanna Meiners and Klaus Thoden, based on a design by <a href="https://github.com/tschaef">Tobias Schäfer</a>. </p>
-					<p>Former versions of this template were packaged together by <a href="https://github.com/mromanello">Matteo Romanello</a> and based on the layout design by <a href="https://github.com/patrickheck">Patrick Heck</a>.</p>
-					<p>For bugs, feature requests etc. please use the <a href="https://github.com/DARIAH-DE/StyleGuideTemplate/issues">github issue tracker</a>.</p>
-
-
 				</div>
+			</div>
 
-			<!-- <div class="wrap">
-				<div class="blog_row">
-					<a class="post -image" href="blog-post">
-						<h2 class="post_title">
-							<img class="post_image" src="content/images/blog-photo-thumb.jpg" srcset="content/images/blog-photo-thumb.jpg 1x, content/images/blog-photo-thumb@2x.jpg 1.5x" alt="">
-							Forschungsverbünde DARIAH-DE und Marbach-Weimar-Wolfenbüttel intensivieren Kooperation
-						</h2>
-						<div class="post_header">
-							<span class="post_date">05.07.2017</span>
-							<span class="post_author">Alexander Steckel</span>
-						</div>
-						<div class="post_excerpt">
-							Treffen am 6. Juni 2017 in der DARIAH-Geschäftsstelle an der SUB Göttingen: Die Forschungsverbünde DARIAH-DE und&nbsp;&hellip;
-						</div>
-					</a>
-
-					<a class="post -image">
-						<h2 class="post_title">
-							<img class="post_image" src="content/images/dummy-grid-thumb.jpg" srcset="content/images/dummy-grid-thumb.jpg 1x, content/images/dummy-grid-thumb@2x.jpg 1.5x" alt="">
-							Working Paper Nr. 24 erschienen
-						</h2>
-						<div class="post_header">
-							<span class="post_date">19.06.2017</span>
-							<span class="post_author">Mirjam Blümm</span>
-						</div>
-						<div class="post_excerpt">
-							Das DARIAH Working Paper Nummer 24 zum Thema "Quantifizierung von Emotionswörtern in Texten" ist soeben erschienen. Der Beitrag
-							beschreibt den gegenwärtigen Forschungsstand im Hinblick auf die Analyse von Emotionswörtern&nbsp;&hellip;
-						</div>
-					</a>
-				</div>
-
-				<div class="blog_row">
-					<a class="post -image">
-						<h2 class="post_title">
-							<img class="post_image" src="content/images/dummy-code-thumb.jpg" srcset="content/images/dummy-code-thumb.jpg 1x, content/images/dummy-code-thumb@2x.jpg 1.5x" alt="">
-							Working Paper Mai 2017
-						</h2>
-						<div class="post_header">
-							<span class="post_date">30.05.2017</span>
-							<span class="post_author">Beata Mache</span>
-						</div>
-						<div class="post_excerpt">
-							Zwei neue DARIAH-DE Working Papers sind gerade erschienen: Frauke Sachse, Michael Dürr, Christian W. R. Klingler. "Digitale
-							Erschließung und systematische Annotation kolonialer Wörterbücher am Beispiel der Mayasprache K'iche'".&nbsp;&hellip;
-						</div>
-					</a>
-
-					<a class="post -image">
-						<h2 class="post_title">
-							<img class="post_image" src="content/images/dummy-people-thumb.jpg" srcset="content/images/dummy-people-thumb.jpg 1x, content/images/dummy-people-thumb@2x.jpg 1.5x" alt="">
-							Lorem ipsum dolor sit amet
-						</h2>
-						<div class="post_header">
-							<span class="post_date">20.05.2017</span>
-							<span class="post_author">Tobias Schäfer</span>
-						</div>
-						<div class="post_excerpt">
-							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus repellendus dolorum repellat similique a, deserunt
-							enim, nemo ratione minus aliquam, dolore ex! Nemo adipisci, veritatis eligendi facere aperiam deserunt assumenda.&nbsp;&hellip;
-						</div>
-					</a>
-				</div>
+			<div class="wrap">
 
 				<div class="blog_row">
 					<a class="post">
 						<h2 class="post_title">
-							Ut perspiciatis error rerum
+							Neue Funktionalität
 						</h2>
 						<div class="post_header">
 							<span class="post_date">02.05.2017</span>
@@ -501,7 +281,7 @@
 
 					<a class="post">
 						<h2 class="post_title">
-							Necessitatibus repellendus dolorum
+							Veröffentlichung mit TOOL
 						</h2>
 						<div class="post_header">
 							<span class="post_date">01.05.2017</span>
@@ -515,7 +295,7 @@
 
 					<a class="post">
 						<h2 class="post_title">
-							Commodi soluta temporibus quod
+							Veranstaltungshinweis
 						</h2>
 						<div class="post_header">
 							<span class="post_date">23.04.2017</span>
@@ -535,7 +315,7 @@
 						<use xlink:href="#icon-angle-right"></use>
 					</svg>
 				</a>
-			</div> -->
+			</div>
 		</main>
 	</div>
 
@@ -617,9 +397,6 @@
 		</symbol>
 		<symbol id="icon-link" viewBox="0 0 17 17">
 			<path d="M12.983 6.94l-.938.938-.707-.707.938-.938c.975-.975.975-2.561 0-3.535s-2.561-.975-3.535 0L5.754 5.686c-.975.975-.975 2.561 0 3.535s2.561.975 3.535 0l.707.707c-.683.683-1.578 1.023-2.475 1.023s-1.792-.341-2.474-1.023a3.504 3.504 0 0 1 0-4.949l2.987-2.987a3.502 3.502 0 0 1 4.949 0 3.501 3.501 0 0 1 0 4.948zM6.042 8.034l-.13.129.705.709.131-.13c.975-.975 2.561-.975 3.535 0s.975 2.561 0 3.535L7.26 15.302c-.975.975-2.561.975-3.535 0s-.975-2.561 0-3.535l1.058-1.059-.707-.707-1.058 1.059a3.504 3.504 0 0 0 0 4.949c.683.683 1.578 1.023 2.475 1.023s1.792-.341 2.475-1.023l3.023-3.024a3.504 3.504 0 0 0 0-4.949 3.503 3.503 0 0 0-4.949-.002z" />
-		</symbol>
-		<symbol id="icon-info-alt" viewBox="0 0 17 17">
-			<path d="M8.5 0c-4.687 0-8.5 3.813-8.5 8.5s3.813 8.5 8.5 8.5 8.5-3.813 8.5-8.5-3.813-8.5-8.5-8.5zM8.5 16c-4.136 0-7.5-3.364-7.5-7.5s3.364-7.5 7.5-7.5 7.5 3.364 7.5 7.5-3.364 7.5-7.5 7.5zM9 12.369h0.979v1h-2.958v-1h0.979v-4.42h-0.946v-1h1.946v5.42zM7.185 4.986c0-0.545 0.441-0.986 0.986-0.986s0.985 0.441 0.985 0.986c0 0.543-0.44 0.984-0.985 0.984s-0.986-0.441-0.986-0.984z" />
 		</symbol>
 	</svg>
 </body>
