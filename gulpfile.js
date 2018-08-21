@@ -12,11 +12,11 @@ var wrap = require('gulp-wrap')
 
 var paths = {
 	scriptSrc: 'js/**/*.js',
-	scriptDest: 'templates/assets',
+	scriptDest: 'docs/assets',
 	scriptWatch: 'js/**/*.js',
 
 	styleSrc: 'scss/*.scss',
-	styleDest: 'templates/assets',
+	styleDest: 'docs/assets',
 	styleWatch: 'scss/**/*.scss',
 }
 

@@ -9,13 +9,13 @@ This template is based on the report [R. 1.2.2/R. 7.5 *Usability Criteria for Ex
 ## How to view this template?
 
 1. `git clone` this repository
-2. `cd` into the `templates` directory
+2. `cd` into the `docs` directory
 3. launch a web server from terminal with `python -m SimpleHTTPServer 8000` (for python2) or `python3 -m http.server` (for python3)
 4. open `localhost:8000` in a browser
 
 or just check it out at <http://dariah-de.github.io/StyleGuideTemplate/>.
 
-To view the previous style guide version, `cd` to `templates/StyleGuide_v100` and launch
+To view the previous style guide version, `cd` to `docs/StyleGuide_v100` and launch
 the web server from that directory.
 
 ## Design Primer
