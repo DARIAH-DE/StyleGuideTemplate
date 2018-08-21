@@ -25,7 +25,7 @@ the [Design-Primer](design-primer.de.md) (currently only in German)
 
 ## Contact
 
-This style guide was compiled by [Malte Vogl](https://github.com/maltevogl), Hanna Meiners, Klaus Thoden, ... , based on a design by [Tobias Schäfer](https://github.com/tschaef).
+This style guide was compiled by [Malte Vogl](https://github.com/maltevogl), Hanna Meiners and Klaus Thoden, based on a design by [Tobias Schäfer](https://github.com/tschaef).
 
 This work is based on the previous template, which was packaged together by [Matteo Romanello](https://github.com/mromanello) and was based on the layout design by [Patrick Heck](https://github.com/patrickheck).
 
