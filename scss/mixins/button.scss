@@ -1,0 +1,24 @@
+@mixin button {
+	@include caps;
+	@include transition(background);
+	background: $link-color;
+	border: 0;
+	border-radius: $br;
+	color: #fff;
+	display: inline-block;
+	min-height: ($grid * 2); // Compensate reduced line height
+	min-width: ($grid * 2);
+	padding: ($grid / 2);
+	text-align: center;
+	width: auto;
+
+	@if lightness($secondary-color) > 50 {
+		color: #000;
+	} @else {
+		color: #fff;
+	}
+
+	@include hover {
+		background: shade($link-color, 15);
+	}
+}

@@ -1,0 +1,82 @@
+.tile {
+	@include caps;
+	background: #fff;
+	background: radial-gradient(#fff 75%, $light-grey 100%);
+	border: 0;
+	border-radius: $br;
+	box-shadow: $card-shadow;
+	color: $primary-color;
+	float: left;
+	font-weight: bold;
+	height: ($grid * 7.5);
+	line-height: 1.5; // Improving vertical alignment alongside icons
+	margin: ($grid / 2);
+	padding: ($grid * 1.5) ($grid / 4);
+	text-align: center;
+	transition: box-shadow .4s, transform .4s;
+	vertical-align: top;
+	word-spacing: -1px;
+	width: ($grid * 7.5);
+
+	@include hover {
+		box-shadow: $drop-shadow;
+		color: $primary-color;
+		transform: scale(1.05);
+		transition-duration: .2s;
+	}
+
+	@media #{$large} {
+		height: ($grid * 6.5);
+		margin: ($grid / 3);
+		padding: ($grid * 1.25) ($grid / 4);
+		width: ($grid * 6.5);
+	}
+
+	@media (max-width: $grid * 44.5) {
+		font-size: 11.5px; // Fitting "Beratung & Support" into one line
+		height: ($grid * 4.5);
+		margin: ($grid / 4);
+		padding: $grid ($grid / 4);
+	}
+
+	@media (max-width: $grid * 14.5) {
+		display: block;
+		float: none;
+		font-size: $font-size-caps;
+		height: ($grid * 2.25);
+		margin: ($grid / 4);
+		padding: ($grid * .75) ($grid / 2);
+		text-align: left;
+		width: auto;
+
+		& + & {
+			margin-top: ($grid / 2);
+		}
+	}
+
+	> svg {
+		display: block;
+		fill: currentColor;
+		margin: 0 auto ($grid * 3.25);
+		stroke: #fff;
+		stroke-width: .3px;
+		transform: scale(4);
+		transform-origin: center 0;
+
+		@media #{$large} {
+			margin: 0 auto ($grid * 2.5);
+			transform: scale(3.5);
+		}
+
+		@media (max-width: $grid * 44.5) {
+			margin: 0 auto ($grid * 1.5);
+			stroke-width: .1px;
+			transform: scale(2);
+		}
+
+		@media (max-width: $grid * 14.5) {
+			float: left;
+			margin: (-$grid / 4 - 2px) $grid 0 ($grid / 2); // Fixing vertical alignment
+		}
+	}
+}

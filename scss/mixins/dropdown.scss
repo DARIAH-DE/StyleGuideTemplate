@@ -1,0 +1,18 @@
+@mixin dropdown {
+	@include clip(top);
+	@include transition(opacity, visibility);
+	background: $secondary-color;
+	border-radius: 0 0 $br $br;
+	box-shadow: $drop-shadow;
+	opacity: 0;
+	padding: ($grid / 2);
+	position: absolute;
+	visibility: hidden;
+	z-index: 9;
+
+	&.-open {
+		opacity: 1;
+		visibility: visible;
+		z-index: 9;
+	}
+}

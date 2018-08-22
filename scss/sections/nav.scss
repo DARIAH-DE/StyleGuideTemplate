@@ -1,0 +1,374 @@
+// TODO: Show as many first-level items as possible along with a "Show all" link,
+// using JS from Seaweed theme
+
+.nav_item {
+	&::before {
+		content: none;
+	}
+
+	&.-level-1 {
+		display: table-cell;
+
+		@media #{$large} {
+			display: block;
+		}
+
+		&.-home {
+			@media #{$large} {
+				display: none;
+			}
+		}
+	}
+
+	&.-level-2 {
+		display: table-cell;
+		float: none;
+		margin: 0 ($grid / 4) 0 0;
+		padding: 0 ($grid / 4);
+		position: relative;
+
+		@media #{$large} {
+			display: block;
+			margin: 0;
+			padding: 0;
+		}
+
+		& + & {
+			@include separator;
+
+			// Adjust separator
+			&::before {
+				left: 0;
+
+				@media #{$large} {
+					content: none;
+				}
+			}
+		}
+
+		&:first-child {
+			padding-left: 0;
+		}
+
+		&:last-child {
+			box-shadow: none;
+			padding-right: 0;
+		}
+
+		.nav_list.-portal &:nth-child(n+2) {
+			@media #{$large} {
+				margin-top: $grid;
+			}
+		}
+	}
+
+	&.-level-3 {
+		float: none;
+	}
+}
+
+.nav_link {
+	@include header-link;
+	@include transition(background, color);
+	color: #fff;
+	display: block;
+	min-width: ($grid * 2.5);
+	padding: ($grid * .75) ($grid / 2);
+	position: relative;
+	user-select: none;
+
+	@media #{$large} {
+		text-align: left;
+	}
+
+	// Align drop-down arrows
+	.nav_item.-level-1 > & {
+		> .icon {
+			margin-left: .2em;
+			top: -1px;
+		}
+	}
+
+	.nav_item.-level-1.-current > &,
+	.nav_item.-level-1.-current-ancestor > & {
+		background: $shine;
+
+		@include hover {
+			background: $shine-strong;
+		}
+	}
+
+	.nav_item.-level-1.-open > & {
+		background: $secondary-color;
+		outline: 0; // Prevent ouline from popping up on mouse out, sacrificing a11y
+		z-index: 9;
+
+		@include hover {
+			background: $secondary-color;
+			box-shadow: none;
+
+			@media #{$large} {
+				background: $shine-weak;
+			}
+		}
+
+		> .icon {
+			transform: rotateZ(-180deg);
+		}
+	}
+
+	.nav_item.-level-2 > & {
+		@include typo-scale(1);
+		font-family: $heading-font;
+
+		@media #{$large} {
+			font-size: $font-size;
+		}
+	}
+
+	// Level 2 and below
+	.nav_item.-level-2 & {
+		border-radius: $br;
+		padding: ($grid / 2);
+		text-align: left;
+
+		&.-current {
+			background: $shine;
+
+			@include hover {
+				background: $shine-strong;
+			}
+		}
+
+		// Old icons
+		> img {
+			filter: grayscale(1) brightness(9);
+			float: left;
+			margin: 0 ($grid / 2) 0 0;
+			vertical-align: middle;
+			width: $grid;
+		}
+	}
+
+	// Align "home" icon
+	.nav_list > .nav_item.-level-1:first-child > & {
+		> .icon {
+			margin-left: 0;
+			top: -2px;
+		}
+	}
+}
+
+.nav_list {
+	@include clearfix;
+	margin: 0;
+	max-width: none;
+	padding: 0;
+
+	.nav-collapsed & {
+		background: $text-color;
+	}
+
+	// Make room for DARIAH menu
+	&.-level-1 {
+		float: left;
+		display: table;
+		max-width: $max-width;
+
+		@media #{$large} {
+			float: none;
+			width: 100%;
+		}
+	}
+
+	&.-level-2 {
+		@include dropdown;
+		left: 0;
+		right: 0;
+
+		@media #{$large} {
+			@include separator(bottom);
+			@include transition(opacity);
+			box-shadow: none;
+			height: 0;
+			overflow: hidden;
+			padding: 0;
+			position: relative;
+			visibility: none;
+
+			&.-open,
+			&.-portal {
+				height: auto;
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+
+	&.-level-3 {
+		margin-left: ($grid * 1.5);
+	}
+
+	&.-portal {
+		display: block;
+		left: auto;
+		right: 0;
+		top: ($grid * 2.5);
+		white-space: nowrap;
+
+		@media #{$large} {
+			box-shadow: none;
+			position: relative;
+			top: 0;
+			z-index: 0;
+		}
+
+		ul {
+			margin: 0;
+			padding: 0;
+		}
+
+		.nav_menu.-open & {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+
+// DARIAH logo
+.nav_logo {
+	display: inline;
+	float: none;
+	height: ($grid * 1.125);
+	margin: (-$grid / 4) 0;
+	position: relative;
+	top: -9px; // Vertically align logo text
+	vertical-align: middle;
+	width: auto;
+
+	// TODO: Use 5-leaf flower?
+	&.-large {
+		@media #{$large} {
+			display: none;
+		}
+	}
+
+	&.-small {
+		display: none;
+		width: $grid;
+
+		@media #{$large} {
+			display: inline;
+			top: -1px; // Re-align without arrow
+		}
+	}
+}
+
+.nav_menu {
+	float: left;
+
+	@media #{$large} {
+		@include transition(opacity);
+		background: $secondary-color;
+		clear: both;
+		float: none;
+		height: 0;
+		opacity: 0;
+		overflow: hidden;
+		visibility: hidden;
+
+		&.-open {
+			height: auto;
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	&.-portal {
+		h2 {
+			color: #fff;
+			margin: ($grid / 2) ($grid / 2) $grid;
+
+			a {
+				margin: (-$grid / 2);
+				padding: ($grid / 2);
+			}
+		}
+
+		hr {
+			border-top: 1px solid $shade;
+			border-bottom: 1px solid $shine;
+			margin: ($grid / 4);
+		}
+	}
+}
+
+.nav_toggle {
+	background: none;
+	border: 0;
+	border-radius: 0;
+	color: #fff;
+	float: left;
+	padding: ($grid * .75) ($grid / 2);
+
+	@include hover {
+		background: $shine-weak;
+		color: #fff;
+	}
+
+	@media #{$large} {
+		padding: ($grid / 2);
+	}
+
+	&.-main {
+		display: none;
+
+		@media #{$large} {
+			display: block;
+		}
+	}
+
+	&.-open {
+		background: $secondary-color;
+		box-shadow: none;
+		outline: 0; // Prevent ouline from popping up on mouse out, sacrificing a11y
+	}
+
+	&.-portal {
+		@include separator;
+		display: block;
+		white-space: nowrap; // IE 11 fix
+		position: absolute;
+		right: 0;
+		top: 0;
+
+		&.-open {
+			background: $secondary-color;
+			box-shadow: none;
+
+			> .icon {
+				transform: rotateZ(-180deg);
+			}
+		}
+
+		// Adjust separator
+		&::before {
+			left: (-$grid / 4);
+			top: 0;
+		}
+
+		> .icon {
+			margin: 0 0 0 .2em;
+			top: -1px;
+
+			@media #{$large} {
+				display: none;
+			}
+		}
+	}
+
+	> .icon {
+		margin: 0 .2em 0 0;
+		top: -1px;
+	}
+}

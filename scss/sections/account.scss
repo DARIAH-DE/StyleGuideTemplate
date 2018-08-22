@@ -1,0 +1,81 @@
+.account {
+	color: #fff;
+	float: left;
+	// position: relative;
+}
+
+.account_item {
+	&::before {
+		content: none;
+	}
+}
+
+.account_link {
+	@include header-link;
+	border-radius: $br;
+	display: block;
+	padding: ($grid / 2);
+	text-align: left;
+
+	> .icon {
+		margin: 0 .2em 0 0;
+	}
+
+	&.-logout > .icon {
+		top: -1px;
+		transform: rotate(90deg);
+	}
+}
+
+.account_list {
+	@include dropdown;
+	right: 0;
+}
+
+.account_logged-in-as {
+	display: block;
+	font-size: $font-size-small;
+	padding: ($grid / 4) ($grid / 2) 0;
+}
+
+.account_name {
+	color: #fff;
+	display: block;
+	font-weight: bold;
+	padding: 0 ($grid / 2) ($grid / 4);
+}
+
+.account_toggle {
+	@include header-link;
+	@include transition(background);
+	background: none;
+	border-radius: 0;
+	display: inline-block;
+	padding: ($grid * .75) ($grid / 2);
+	min-width: ($grid * 2.5);
+	text-align: center;
+
+	@media #{$small} {
+		min-width: ($grid * 2);
+		padding: ($grid / 2);
+	}
+
+	&.-logged-in {
+		> .icon {
+			top: -1px;
+		}
+	}
+
+	&.-logged-out {
+		> .icon {
+			left: -2px;
+			transform: rotate(270deg);
+			top: -1px;
+		}
+	}
+
+	&.-open {
+		background: $secondary-color;
+		box-shadow: none;
+	}
+}
