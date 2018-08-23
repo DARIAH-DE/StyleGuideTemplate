@@ -8,11 +8,9 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<script src="assets/script.js" defer></script>
+	<script type="text/javascript" src="assets/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="assets/globalmenu.js"></script>
 
-<!-- Test for dynamic menu generation
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
-	<script type="text/javascript" src="assets/globalmenu_test.js"></script>
--->
 	<title>DARIAH-DE :: Style Guide Template</title>
 </head>
 
@@ -181,64 +179,8 @@
 						</svg>
 					</button>
 
-					<div id="replace" class="nav_menu -portal">
-						<ul class="nav_list -level-2 -portal">
-							<li class="nav_item -level-2">
-								<a class="nav_link" href="https://de.dariah.eu/">DARIAH-DE</a>
-								<ul class="nav_list -level-3">
-									<li class="nav_item -level-3">
-										<a class="nav_link" href="https://wiki.de.dariah.eu/">DARIAH Wiki</a>
-									</li>
-									<li class="nav_item -level-3">
-										<a class="nav_link" href="https://etherpad.de.dariah.eu/">DARIAH Etherpad</a>
-									</li>
-									<li class="nav_item -level-3">
-										<hr>
-									</li>
-									<li class="nav_item -level-3">
-										<a class="nav_link" href="https://textgrid.de/">TextGrid</a>
-									</li>
-									<li class="nav_item -level-3">
-										<hr>
-									</li>
-									<li class="nav_item -level-3">
-										<a class="nav_link" href="https://search.de.dariah.eu/">Generic Search</a>
-									</li>
-									<li class="nav_item -level-3">
-										<a class="nav_link" href="https://colreg.de.dariah.eu/">Collection Registry</a>
-									</li>
-									<li class="nav_item -level-3">
-										<a class="nav_link" href="https://schereg.de.dariah.eu">Schema &amp; Mapping Registry</a>
-									</li>
-									<li class="nav_item -level-3">
-										<hr>
-									</li>
-									<li class="nav_item -level-3">
-										<a class="nav_link" href="http://meise.de.dariah.eu/">MEI Score Editor</a>
-									</li>
-									<li class="nav_item -level-3">
-										<hr>
-									</li>
-									<li class="nav_item -level-3">
-										<a class="nav_link" href="https://geobrowser.de.dariah.eu/">Geo-Browser</a>
-									</li>
-									<li class="nav_item -level-3">
-										<a class="nav_link" href="https://geobrowser.de.dariah.eu/edit/">Datasheet Editor</a>
-									</li>
-								</ul>
-							</li>
-							<li class="nav_item -level-2">
-								<a class="nav_link" href="http://dariah.eu">DARIAH-EU</a>
-								<ul class="nav_list -level-3">
-									<li class="nav_item -level-3">
-										<a class="nav_link" href="http://has.dariah.eu">Humanities at Scale</a>
-									</li>
-								</ul>
-							</li>
-							<li class="nav_item -level-2">
-								<a class="nav_link" href="http://dhd-blog.org/">DHd-Blog</a>
-							</li>
-						</ul>
+					<div class="nav_menu -portal">
+						<ul id="home_dropdown_menu" class="nav_list -level-2 -portal"></ul>
 					</div>
 				</nav>
 			</div>
@@ -334,12 +276,12 @@
 							</li>
 						</ul>
 					</p>
-					<h3>What not to change ( WORK IN PROGRESS )</h3>
+					<h3>What not to change</h3>
 					<p>
 						<svg class="icon">
 							<use xlink:href="#icon-info-alt"></use>
 						</svg>
-						The DARIAH-DE Global Menu must remain unchanged (i.e. the dropdown menu in the top-left corner which is re-populated from a global JSON definition).
+						The DARIAH-DE Global Menu must remain unchanged (i.e. the dropdown menu in the top-right corner which is re-populated from a global JSON definition).
 					</p>
 					<hr />
 					<h2 id="sgt_content">Included examples and content</h2>
@@ -420,123 +362,6 @@
 
 
 				</div>
-
-			<!-- <div class="wrap">
-				<div class="blog_row">
-					<a class="post -image" href="blog-post">
-						<h2 class="post_title">
-							<img class="post_image" src="content/images/blog-photo-thumb.jpg" srcset="content/images/blog-photo-thumb.jpg 1x, content/images/blog-photo-thumb@2x.jpg 1.5x" alt="">
-							Forschungsverbünde DARIAH-DE und Marbach-Weimar-Wolfenbüttel intensivieren Kooperation
-						</h2>
-						<div class="post_header">
-							<span class="post_date">05.07.2017</span>
-							<span class="post_author">Alexander Steckel</span>
-						</div>
-						<div class="post_excerpt">
-							Treffen am 6. Juni 2017 in der DARIAH-Geschäftsstelle an der SUB Göttingen: Die Forschungsverbünde DARIAH-DE und&nbsp;&hellip;
-						</div>
-					</a>
-
-					<a class="post -image">
-						<h2 class="post_title">
-							<img class="post_image" src="content/images/dummy-grid-thumb.jpg" srcset="content/images/dummy-grid-thumb.jpg 1x, content/images/dummy-grid-thumb@2x.jpg 1.5x" alt="">
-							Working Paper Nr. 24 erschienen
-						</h2>
-						<div class="post_header">
-							<span class="post_date">19.06.2017</span>
-							<span class="post_author">Mirjam Blümm</span>
-						</div>
-						<div class="post_excerpt">
-							Das DARIAH Working Paper Nummer 24 zum Thema "Quantifizierung von Emotionswörtern in Texten" ist soeben erschienen. Der Beitrag
-							beschreibt den gegenwärtigen Forschungsstand im Hinblick auf die Analyse von Emotionswörtern&nbsp;&hellip;
-						</div>
-					</a>
-				</div>
-
-				<div class="blog_row">
-					<a class="post -image">
-						<h2 class="post_title">
-							<img class="post_image" src="content/images/dummy-code-thumb.jpg" srcset="content/images/dummy-code-thumb.jpg 1x, content/images/dummy-code-thumb@2x.jpg 1.5x" alt="">
-							Working Paper Mai 2017
-						</h2>
-						<div class="post_header">
-							<span class="post_date">30.05.2017</span>
-							<span class="post_author">Beata Mache</span>
-						</div>
-						<div class="post_excerpt">
-							Zwei neue DARIAH-DE Working Papers sind gerade erschienen: Frauke Sachse, Michael Dürr, Christian W. R. Klingler. "Digitale
-							Erschließung und systematische Annotation kolonialer Wörterbücher am Beispiel der Mayasprache K'iche'".&nbsp;&hellip;
-						</div>
-					</a>
-
-					<a class="post -image">
-						<h2 class="post_title">
-							<img class="post_image" src="content/images/dummy-people-thumb.jpg" srcset="content/images/dummy-people-thumb.jpg 1x, content/images/dummy-people-thumb@2x.jpg 1.5x" alt="">
-							Lorem ipsum dolor sit amet
-						</h2>
-						<div class="post_header">
-							<span class="post_date">20.05.2017</span>
-							<span class="post_author">Tobias Schäfer</span>
-						</div>
-						<div class="post_excerpt">
-							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus repellendus dolorum repellat similique a, deserunt
-							enim, nemo ratione minus aliquam, dolore ex! Nemo adipisci, veritatis eligendi facere aperiam deserunt assumenda.&nbsp;&hellip;
-						</div>
-					</a>
-				</div>
-
-				<div class="blog_row">
-					<a class="post">
-						<h2 class="post_title">
-							Ut perspiciatis error rerum
-						</h2>
-						<div class="post_header">
-							<span class="post_date">02.05.2017</span>
-							<span class="post_author">Tobias Schäfer</span>
-						</div>
-						<div class="post_excerpt">
-							Ut perspiciatis error rerum, tempore possimus illo voluptas alias ex quidem quibusdam ipsum similique accusamus repellat.
-							Exercitationem aliquid quaerat aspernatur eaque tenetur.&nbsp;&hellip;
-						</div>
-					</a>
-
-					<a class="post">
-						<h2 class="post_title">
-							Necessitatibus repellendus dolorum
-						</h2>
-						<div class="post_header">
-							<span class="post_date">01.05.2017</span>
-							<span class="post_author">Tobias Schäfer</span>
-						</div>
-						<div class="post_excerpt">
-							Necessitatibus repellendus dolorum repellat similique a, deserunt enim, nemo ratione minus aliquam, dolore ex! Nemo adipisci,
-							veritatis eligendi facere aperiam deserunt assumenda.&nbsp;&hellip;
-						</div>
-					</a>
-
-					<a class="post">
-						<h2 class="post_title">
-							Commodi soluta temporibus quod
-						</h2>
-						<div class="post_header">
-							<span class="post_date">23.04.2017</span>
-							<span class="post_author">Tobias Schäfer</span>
-						</div>
-						<div class="post_excerpt">
-							Commodi soluta temporibus quod? Voluptates, culpa quaerat ipsa, voluptatibus ut nisi, blanditiis iure necessitatibus hic
-							dolores cum saepe nesciunt a et ipsum? Consequatur nobis nostrum&nbsp;&hellip;
-						</div>
-					</a>
-				</div>
-			</div>
-
-			<div class="center">
-				<a class="main_button" href="#">Alle News
-					<svg class="icon">
-						<use xlink:href="#icon-angle-right"></use>
-					</svg>
-				</a>
-			</div> -->
 		</main>
 	</div>
 

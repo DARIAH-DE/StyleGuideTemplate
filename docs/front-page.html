@@ -2,12 +2,15 @@
 <html lang="de">
 
 <head>
-	<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+	<link rel="favicon.ico" type="image/x-icon" href="assets/favicon.ico">
 	<link rel="stylesheet" href="assets/styles.css">
 	<meta charset="utf-8">
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<script src="assets/script.js" defer></script>
+	<script type="text/javascript" src="assets/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="assets/globalmenu.js"></script>
+
 	<title>DARIAH-DE</title>
 </head>
 
@@ -177,63 +180,7 @@
 					</button>
 
 					<div class="nav_menu -portal">
-						<ul class="nav_list -level-2 -portal">
-							<li class="nav_item -level-2">
-								<a class="nav_link" href="https://de.dariah.eu/">DARIAH-DE</a>
-								<ul class="nav_list -level-3">
-									<li class="nav_item -level-3">
-										<a class="nav_link" href="https://wiki.de.dariah.eu/">DARIAH Wiki</a>
-									</li>
-									<li class="nav_item -level-3">
-										<a class="nav_link" href="https://etherpad.de.dariah.eu/">DARIAH Etherpad</a>
-									</li>
-									<li class="nav_item -level-3">
-										<hr>
-									</li>
-									<li class="nav_item -level-3">
-										<a class="nav_link" href="https://textgrid.de/">TextGrid</a>
-									</li>
-									<li class="nav_item -level-3">
-										<hr>
-									</li>
-									<li class="nav_item -level-3">
-										<a class="nav_link" href="https://search.de.dariah.eu/">Generic Search</a>
-									</li>
-									<li class="nav_item -level-3">
-										<a class="nav_link" href="https://colreg.de.dariah.eu/">Collection Registry</a>
-									</li>
-									<li class="nav_item -level-3">
-										<a class="nav_link" href="https://schereg.de.dariah.eu">Schema &amp; Mapping Registry</a>
-									</li>
-									<li class="nav_item -level-3">
-										<hr>
-									</li>
-									<li class="nav_item -level-3">
-										<a class="nav_link" href="http://meise.de.dariah.eu/">MEI Score Editor</a>
-									</li>
-									<li class="nav_item -level-3">
-										<hr>
-									</li>
-									<li class="nav_item -level-3">
-										<a class="nav_link" href="https://geobrowser.de.dariah.eu/">Geo-Browser</a>
-									</li>
-									<li class="nav_item -level-3">
-										<a class="nav_link" href="https://geobrowser.de.dariah.eu/edit/">Datasheet Editor</a>
-									</li>
-								</ul>
-							</li>
-							<li class="nav_item -level-2">
-								<a class="nav_link" href="http://dariah.eu">DARIAH-EU</a>
-								<ul class="nav_list -level-3">
-									<li class="nav_item -level-3">
-										<a class="nav_link" href="http://has.dariah.eu">Humanities at Scale</a>
-									</li>
-								</ul>
-							</li>
-							<li class="nav_item -level-2">
-								<a class="nav_link" href="http://dhd-blog.org/">DHd-Blog</a>
-							</li>
-						</ul>
+						<ul id="home_dropdown_menu" class="nav_list -level-2 -portal"></ul>
 					</div>
 				</nav>
 			</div>
