@@ -1,13 +1,11 @@
 $.getJSON("https://res.de.dariah.eu/globalmenu/menu.json", function( data ) {
 
-//$( 'ul#home_dropdown_menu' ).replaceWith( "<div id='home_dropdown_menu' class='nav_menu -portal'></div>" );
-
-var ul_main = $("<ul class='nav_list -level-2 -portal'></ul>");
+var ul_main = $("<ul id='home_dropdown_menu' class='nav_list -level-2 -portal'></ul>");
 
 $.each(data['menu'], function (key, val) {
 	if (typeof val.title !== "undefined") {
 		var li = $("<li class='nav_item -level-2'>",  { id: 'li' + key, text : val.title });
-		var a = $("a class='nav_link' href='" + val.link + "'>" + val.title + "</a></li>");
+		var a = $("<a class='nav_link' href='" + val.link + "'>" + val.title + "</a></li>");
 
 		a.appendTo(li);
 
@@ -30,7 +28,7 @@ $.each(data['menu'], function (key, val) {
     li.appendTo(ul_main);
 }});
 
-$( 'ul#home_dropdown_menu' ).empty().append(ul_main);
+$( 'ul#home_dropdown_menu' ).replaceWith(ul_main);
 
 }).fail(function() {
   console.log( 'Error loading menu JSON!' );
